@@ -576,3 +576,346 @@ console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message f
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
 JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
 JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+1660669760590	Marionette	INFO	Stopped listening on port 58514
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660670232576	geckodriver	INFO	Listening on 127.0.0.1:62994
+1660670235648	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62995" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileocO5HM"
+1660670236219	Marionette	INFO	Marionette enabled
+1660670236232	Marionette	INFO	Listening on port 63005
+WebDriver BiDi listening on ws://localhost:62995
+Read port: 63005
+1660670236598	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileocO5HM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62995/devtools/browser/27374ec4-2d0b-41a9-a2ea-7b4fc8a9a674
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+console.error: "Unable to find target with innerWindowId:4294967299"
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 833: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 833: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+console.error: "stylesheets: fetch failed for https://static.cdninstagram.com/rsrc.php/v3/yF/l/0,cross/WwtLcaNO1oMp5xqHjJHkc8FAgsC1Bdtfv-w1xo3cZLlt.css?_nc_x=Ij3Wp8lg5Kz, using system principal instead."
+console.error: "stylesheets: fetch failed for https://static.cdninstagram.com/rsrc.php/v3/yF/l/0,cross/WwtLcaNO1oMp5xqHjJHkc8FAgsC1Bdtfv-w1xo3cZLlt.css?_nc_x=Ij3Wp8lg5Kz, using system principal instead."
+console.error: "stylesheets: fetch failed for https://static.cdninstagram.com/rsrc.php/v3/yF/l/0,cross/WwtLcaNO1oMp5xqHjJHkc8FAgsC1Bdtfv-w1xo3cZLlt.css?_nc_x=Ij3Wp8lg5Kz, using system principal instead."
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new Error("Connection closed, pending request to server0.conn0.windowGlobal4294967300/pagestyle56, type getLayout failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:293:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:49:19\nupdateBoxModel/lastRequest<@resource://devtools/client/inspector/boxmodel/box-model.js:183:36\nupdateBoxModel@resource://devtools/client/inspector/boxmodel/box-model.js:223:18\n_emit@resource://devtools/shared/event-emitter.js:242:32\nemit@resource://devtools/shared/event-emitter.js:186:18\nemit@resource://devtools/shared/event-emitter.js:330:18\nonReflowInSelection@resource://devtools/client/inspector/inspector.js:1611:10\n_notifyWatchers@resource://devtools/shared/commands/resource/resource-command.js:850:24\nthrottledFunction@resource://devtools/shared/throttle.js:45:21\n_onResourceAvailable@resource://devtools/shared/commands/resource/resource-command.js:695:12\n_emit@resource://devtools/shared/event-emitter.js:242:32\nemit@resource://devtools/shared/event-emitter.js:186:18\nemit@resource://devtools/shared/event-emitter.js:330:18\nonPacket@resource://devtools/shared/protocol/Front.js:342:13\nonPacket@resource://devtools/client/devtools-client.js:482:13\nsend/<@resource://devtools/shared/transport/local-transport.js:68:25\nexports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22\nexports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22\n", "resource://devtools/shared/protocol/Front.js", 107))
+console.error: (new Error("Connection closed, pending request to server0.conn0.windowGlobal4294967300/pagestyle56, type isPositionEditable failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:293:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:49:19\nupdateBoxModel/lastRequest<@resource://devtools/client/inspector/boxmodel/box-model.js:195:50\n", "resource://devtools/shared/protocol/Front.js", 107))
+console.error: "stylesheets: fetch failed for https://static.cdninstagram.com/rsrc.php/v3/yF/l/0,cross/WwtLcaNO1oMp5xqHjJHkc8FAgsC1Bdtfv-w1xo3cZLlt.css?_nc_x=Ij3Wp8lg5Kz, using system principal instead."
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:710:32
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:756:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:637:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: _sendRequestBody@resource://devtools/server/actors/network-monitor/network-observer.js:1421:7
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:555:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:667:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1421, column: 7
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 1421))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:710:32
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:756:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:637:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: _sendRequestBody@resource://devtools/server/actors/network-monitor/network-observer.js:1421:7
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:555:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:667:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1421, column: 7
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 1421))
+Handler function threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:710:32
+_onRequestHeader@resource://devtools/server/actors/network-monitor/network-observer.js:756:10
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:637:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: _sendRequestBody@resource://devtools/server/actors/network-monitor/network-observer.js:1421:7
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:555:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:667:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1421, column: 7
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 1421))
+console.error: "Unable to find target with innerWindowId:4294967300"
+console.error: "Tried to send a 'getApplied' method reply on an already destroyed actor 'pagestyle'"
+console.error: "Tried to send a 'getLayout' method reply on an already destroyed actor 'pagestyle'"
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: _onResponseHeader@resource://devtools/server/actors/network-monitor/network-observer.js:1018:5
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:558:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:667:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1018, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 1018))
+Handler function _httpStopRequest threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:710:32
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:338:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: _onResponseHeader@resource://devtools/server/actors/network-monitor/network-observer.js:1018:5
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:558:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:667:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1018, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 1018))
+Handler function _httpStopRequest threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:710:32
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:338:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+Handler function threw an exception: TypeError: httpActivity.owner is null
+Stack: _onResponseHeader@resource://devtools/server/actors/network-monitor/network-observer.js:1018:5
+_dispatchActivity@resource://devtools/server/actors/network-monitor/network-observer.js:558:14
+NetworkObserver.prototype.observeActivity<@resource://devtools/server/actors/network-monitor/network-observer.js:667:12
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1018, column: 5
+console.error: (new TypeError("httpActivity.owner is null", "resource://devtools/server/actors/network-monitor/network-observer.js", 1018))
+Handler function _httpStopRequest threw an exception: TypeError: browsingContext.currentWindowGlobal is null
+Stack: isChannelFromSystemPrincipal@resource://devtools/server/actors/network-monitor/utils/network-utils.js:99:1
+exports.createNetworkEvent@resource://devtools/server/actors/network-monitor/utils/network-utils.js:188:33
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:710:32
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:338:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 99, column: 1
+console.error: (new TypeError("browsingContext.currentWindowGlobal is null", "resource://devtools/server/actors/network-monitor/utils/network-utils.js", 99))
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660670439403	Marionette	INFO	Stopped listening on port 63005
+1660670441094	geckodriver	INFO	Listening on 127.0.0.1:51908
+1660670444148	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51909" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileLyyXRl"
+1660670444618	Marionette	INFO	Marionette enabled
+1660670444625	Marionette	INFO	Listening on port 52362
+WebDriver BiDi listening on ws://localhost:51909
+Read port: 52362
+1660670444879	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileLyyXRl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51909/devtools/browser/d1c11686-b823-4b50-b812-80bdb165c45a
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+1660670482828	Marionette	INFO	Stopped listening on port 52362
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660670484812	geckodriver	INFO	Listening on 127.0.0.1:61437
+1660670487870	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61438" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile8g86vs"
+1660670488364	Marionette	INFO	Marionette enabled
+1660670488371	Marionette	INFO	Listening on port 61449
+WebDriver BiDi listening on ws://localhost:61438
+Read port: 61449
+1660670488683	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile8g86vs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61438/devtools/browser/e358dc0a-0429-4820-8f01-deeea24a0338
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, 1660670547769	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61508" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileNRhCM4"
+1660670548613	Marionette	INFO	Marionette enabled
+1660670548622	Marionette	INFO	Listening on port 61520
+WebDriver BiDi listening on ws://localhost:61508
+Read port: 61520
+1660670548912	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileNRhCM4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61508/devtools/browser/379bc004-0853-4ef5-ad8e-9bb78f994777
+1660670553308	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("currentNode is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 66))
+TypeError: currentNode is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:66:20
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: "Unable to find target with innerWindowId:4294967299"
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 833: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 833: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, 1660670622811	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61591" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileQ7KyDC"
+1660670623634	Marionette	INFO	Marionette enabled
+1660670623648	Marionette	INFO	Listening on port 61603
+WebDriver BiDi listening on ws://localhost:61591
+Read port: 61603
+1660670624008	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileQ7KyDC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61591/devtools/browser/ea9b6f30-9115-4d80-b722-5ae279de3715
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 833: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 833: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660670633192	Marionette	INFO	Stopped listening on port 61603
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660670663949	geckodriver	INFO	Listening on 127.0.0.1:61662
+1660670667015	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61663" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileetgDZW"
+1660670667500	Marionette	INFO	Marionette enabled
+1660670667507	Marionette	INFO	Listening on port 61674
+WebDriver BiDi listening on ws://localhost:61663
+Read port: 61674
+1660670667737	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileetgDZW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61663/devtools/browser/6203cd39-66ad-4c7c-a831-40768ae799ac
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 1004))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal4294967299/pagestyle24 (resource://devtools/server/actors/page-style.js:1004:5)", "resource://devtools/shared/protocol/Front.js", 376))
+ be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilelbvIk6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61737/devtools/browser/9308f72a-1d70-4b4a-a0a1-6b2fd64c4371
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660671004792	Marionette	INFO	Stopped listening on port 61746
+e-debugging-port" "61807" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilePlM5Hs"
+1660670877807	Marionette	INFO	Marionette enabled
+1660670877812	Marionette	INFO	Listening on port 61817
+WebDriver BiDi listening on ws://localhost:61807
+Read port: 61817
+1660670878038	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilePlM5Hs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61807/devtools/browser/26afa802-0c2d-46a9-9502-00180ee78268
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+1660671005608	Marionette	INFO	Stopped listening on port 61817
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "61872" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilejXzhpM"
+1660670909510	Marionette	INFO	Marionette enabled
+1660670909516	Marionette	INFO	Listening on port 61881
+WebDriver BiDi listening on ws://localhost:61872
+Read port: 61881
+1660670909754	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilejXzhpM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61872/devtools/browser/e55225e6-410d-46a4-a3ab-89b40017b631
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660671006492	Marionette	INFO	Stopped listening on port 61881
+e-debugging-port" "61939" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile1ExSbv"
+1660670983356	Marionette	INFO	Marionette enabled
+1660670983364	Marionette	INFO	Listening on port 61950
+WebDriver BiDi listening on ws://localhost:61939
+Read port: 61950
+1660670983591	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile1ExSbv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61939/devtools/browser/f893305a-3062-4974-86cf-8772687db2f9
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/153bf5197d34.js, line 419: TypeError: o.map is not a function
+1660671001093	Marionette	INFO	Stopped listening on port 61950
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660671116064	geckodriver	INFO	Listening on 127.0.0.1:62010
+1660671119111	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62011" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileIVJQ7O"
+1660671119655	Marionette	INFO	Marionette enabled
+1660671119665	Marionette	INFO	Listening on port 62020
+WebDriver BiDi listening on ws://localhost:62011
+Read port: 62020
+1660671120045	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileIVJQ7O\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62011/devtools/browser/40ff43ad-a1d9-47f2-894d-76e9e7a6582a
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 833: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 833: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660671147017	Marionette	INFO	Stopped listening on port 62020
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
