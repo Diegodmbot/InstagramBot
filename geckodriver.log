@@ -836,8 +836,9 @@ console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node
 console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 1004))
 console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
 console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal4294967299/pagestyle24 (resource://devtools/server/actors/page-style.js:1004:5)", "resource://devtools/shared/protocol/Front.js", 376))
- be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilelbvIk6\\search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660671772369	Marionette	INFO	Stopped listening on port 61674
+emp\\rust_mozprofilelbvIk6\\search.json.mozlz4", (void 0)))
 DevTools listening on ws://localhost:61737/devtools/browser/9308f72a-1d70-4b4a-a0a1-6b2fd64c4371
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
@@ -919,3 +920,698 @@ JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/
 JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 1660671147017	Marionette	INFO	Stopped listening on port 62020
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660671829033	geckodriver	INFO	Listening on 127.0.0.1:63269
+1660671832089	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63270" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileg8qP00"
+1660671832522	Marionette	INFO	Marionette enabled
+1660671832527	Marionette	INFO	Listening on port 63280
+WebDriver BiDi listening on ws://localhost:63270
+Read port: 63280
+1660671832736	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileg8qP00\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63270/devtools/browser/c26fd84f-4715-4917-a398-7229fea1383a
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 833: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 833: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3igmL4/yX/l/es_ES/5HPTXxvFnLu.js?_nc_x=Ij3Wp8lg5Kz, line 1166: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660671850908	Marionette	INFO	Stopped listening on port 63280
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660752850886	geckodriver	INFO	Listening on 127.0.0.1:62357
+1660752853932	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62358" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilerPHTUZ"
+1660752854354	Marionette	INFO	Marionette enabled
+1660752854360	Marionette	INFO	Listening on port 62367
+WebDriver BiDi listening on ws://localhost:62358
+Read port: 62367
+1660752854545	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilerPHTUZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62358/devtools/browser/edb9fc92-dc85-42af-b2cf-fe0903bd5500
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660752877224	Marionette	INFO	Stopped listening on port 62367
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660754042094	geckodriver	INFO	Listening on 127.0.0.1:62501
+1660754045129	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62502" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilePzzTMU"
+1660754045518	Marionette	INFO	Marionette enabled
+1660754045523	Marionette	INFO	Listening on port 62514
+WebDriver BiDi listening on ws://localhost:62502
+Read port: 62514
+1660754045698	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilePzzTMU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62502/devtools/browser/aa60c5b8-0d71-482f-abbb-2393367284f8
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660754056641	Marionette	INFO	Stopped listening on port 62514
+1660754614355	geckodriver	INFO	Listening on 127.0.0.1:61964
+1660754617392	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61965" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileNJEEkm"
+1660754617886	Marionette	INFO	Marionette enabled
+1660754617894	Marionette	INFO	Listening on port 61975
+WebDriver BiDi listening on ws://localhost:61965
+Read port: 61975
+1660754618125	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileNJEEkm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61965/devtools/browser/e7875d69-ab2e-4676-9794-1e6de76165d4
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660754629797	Marionette	INFO	Stopped listening on port 61975
+1660754702516	geckodriver	INFO	Listening on 127.0.0.1:62042
+1660754705573	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62043" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileiAu7yd"
+1660754706026	Marionette	INFO	Marionette enabled
+1660754706034	Marionette	INFO	Listening on port 62054
+WebDriver BiDi listening on ws://localhost:62043
+Read port: 62054
+1660754706286	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileiAu7yd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62043/devtools/browser/bb341d96-a8ae-4a6b-990a-358a9cdb8240
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/a682d537c43a.js, line 419: TypeError: o.map is not a function
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 594"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:594:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 594, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 594: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 577: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1660754858840	Marionette	INFO	Stopped listening on port 62054
+e-debugging-port" "62113" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileiqfnMM"
+1660754797890	Marionette	INFO	Marionette enabled
+1660754797896	Marionette	INFO	Listening on port 62124
+WebDriver BiDi listening on ws://localhost:62113
+Read port: 62124
+1660754798155	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileiqfnMM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62113/devtools/browser/f035e30d-05b8-4181-a21c-7c4d3285af7e
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660754826504	Marionette	INFO	Stopped listening on port 62124
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 7588, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:723
+1660761364481	geckodriver	INFO	Listening on 127.0.0.1:59092
+1660761367549	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59093" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileLAVILH"
+1660761368013	Marionette	INFO	Marionette enabled
+1660761368018	Marionette	INFO	Listening on port 59104
+WebDriver BiDi listening on ws://localhost:59093
+Read port: 59104
+1660761368241	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileLAVILH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59093/devtools/browser/1fc6dbc3-76b9-45fd-b5e9-56e124901a40
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660761382456	Marionette	WARN	TimedPromise timed out after 5000 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+GeckoDriver.prototype.minimizeWindow@chrome://remote/content/marionette/driver.js:2451:11
+1660761387462	Marionette	INFO	Stopped listening on port 59104
+1660761446354	geckodriver	INFO	Listening on 127.0.0.1:59170
+1660761449409	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59171" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilehYz7DX"
+1660761449881	Marionette	INFO	Marionette enabled
+1660761449887	Marionette	INFO	Listening on port 59181
+WebDriver BiDi listening on ws://localhost:59171
+Read port: 59181
+1660761450131	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilehYz7DX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59171/devtools/browser/b966f76c-9fd2-4aca-8f02-f9700cb4e680
+1660761458372	Marionette	WARN	TimedPromise timed out after 5000 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+GeckoDriver.prototype.minimizeWindow@chrome://remote/content/marionette/driver.js:2451:11
+1660761468361	Marionette	INFO	Stopped listening on port 59181
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660761472415	geckodriver	INFO	Listening on 127.0.0.1:59215
+1660761475457	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59216" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilewFdQER"
+1660761475957	Marionette	INFO	Marionette enabled
+1660761475964	Marionette	INFO	Listening on port 59227
+WebDriver BiDi listening on ws://localhost:59216
+Read port: 59227
+1660761476234	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilewFdQER\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59216/devtools/browser/011c978c-2c9b-44b3-900c-e8e8bd3005ff
+1660761484590	Marionette	WARN	TimedPromise timed out after 5000 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+GeckoDriver.prototype.minimizeWindow@chrome://remote/content/marionette/driver.js:2451:11
+1660761505150	Marionette	INFO	Stopped listening on port 59227
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660761507467	geckodriver	INFO	Listening on 127.0.0.1:59269
+1660761510533	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59270" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileeV8Cv4"
+1660761510970	Marionette	INFO	Marionette enabled
+1660761510978	Marionette	INFO	Listening on port 59281
+Read port: 59281
+WebDriver BiDi listening on ws://localhost:59270
+1660761511215	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileeV8Cv4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59270/devtools/browser/dea42945-813f-4f34-9ff8-b6f63e304e39
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660761526060	Marionette	INFO	Stopped listening on port 59281
+1660761537623	geckodriver	INFO	Listening on 127.0.0.1:59340
+1660761540703	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59341" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileWowU44"
+1660761541161	Marionette	INFO	Marionette enabled
+1660761541167	Marionette	INFO	Listening on port 59352
+WebDriver BiDi listening on ws://localhost:59341
+Read port: 59352
+1660761541389	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileWowU44\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59341/devtools/browser/f4cf7759-2a53-4f07-b4f8-a270ac9764ae
+1660761549836	Marionette	WARN	TimedPromise timed out after 5000 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+GeckoDriver.prototype.minimizeWindow@chrome://remote/content/marionette/driver.js:2451:11
+1660761574918	Marionette	INFO	Stopped listening on port 59352
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660762383150	geckodriver	INFO	Listening on 127.0.0.1:51304
+1660762386216	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51305" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileMeyTjT"
+1660762386629	Marionette	INFO	Marionette enabled
+1660762386633	Marionette	INFO	Listening on port 51315
+WebDriver BiDi listening on ws://localhost:51305
+Read port: 51315
+1660762386824	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileMeyTjT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51305/devtools/browser/4fd2621d-b36b-4a8f-8081-b0c447c4e3d5
+1660762395476	Marionette	WARN	TimedPromise timed out after 5000 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+GeckoDriver.prototype.minimizeWindow@chrome://remote/content/marionette/driver.js:2451:11
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660762403208	Marionette	INFO	Stopped listening on port 51315
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660762407021	geckodriver	INFO	Listening on 127.0.0.1:51372
+1660762410089	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51373" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilexQD763"
+1660762410571	Marionette	INFO	Marionette enabled
+1660762410576	Marionette	INFO	Listening on port 51382
+WebDriver BiDi listening on ws://localhost:51373
+Read port: 51382
+1660762410803	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilexQD763\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51373/devtools/browser/6e0a3d27-94c5-400e-bd6f-db22519a9424
+1660762419258	Marionette	WARN	TimedPromise timed out after 5000 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+GeckoDriver.prototype.minimizeWindow@chrome://remote/content/marionette/driver.js:2451:11
+1660762471993	Marionette	INFO	Stopped listening on port 51382
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "51418" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileuO2rtf"
+1660762452784	Marionette	INFO	Marionette enabled
+1660762452790	Marionette	INFO	Listening on port 51427
+WebDriver BiDi listening on ws://localhost:51418
+Read port: 51427
+1660762452994	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileuO2rtf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51418/devtools/browser/6b9645b9-cabb-489f-b40a-274a4231f488
+1660762461384	Marionette	WARN	TimedPromise timed out after 5000 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+GeckoDriver.prototype.minimizeWindow@chrome://remote/content/marionette/driver.js:2451:11
+1660762973804	Marionette	INFO	Stopped listening on port 51427
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660763222938	geckodriver	INFO	Listening on 127.0.0.1:51525
+1660763226004	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "51526" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilef6GQGO"
+*** You are running in headless mode.
+1660763226390	Marionette	INFO	Marionette enabled
+1660763226395	Marionette	INFO	Listening on port 51539
+WebDriver BiDi listening on ws://localhost:51526
+Read port: 51539
+1660763226540	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilef6GQGO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51526/devtools/browser/1c48cf03-f390-4e40-b326-6adaf45bed84
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660763252836	geckodriver	INFO	Listening on 127.0.0.1:51597
+1660763255885	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "headless" "--remote-debugging-port" "51598" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileSP3W70"
+1660763256299	Marionette	INFO	Marionette enabled
+1660763256303	Marionette	INFO	Listening on port 51609
+WebDriver BiDi listening on ws://localhost:51598
+Read port: 51609
+1660763256550	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileSP3W70\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51598/devtools/browser/fdf74bda-dbb1-4404-9eb1-1ffd6847375f
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2273: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1660763286617	geckodriver	INFO	Listening on 127.0.0.1:51633
+1660763289671	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51634" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilebhR4ke"
+1660763290051	Marionette	INFO	Marionette enabled
+1660763290056	Marionette	INFO	Listening on port 51643
+WebDriver BiDi listening on ws://localhost:51634
+Read port: 51643
+1660763290249	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilebhR4ke\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51634/devtools/browser/f5333ec9-5e11-480f-82ff-20157c19aaa7
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660763301022	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660763302434	Marionette	INFO	Stopped listening on port 51643
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660763557535	geckodriver	INFO	Listening on 127.0.0.1:51717
+1660763560575	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "headless" "--remote-debugging-port" "51718" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileplHLFT"
+1660763560994	Marionette	INFO	Marionette enabled
+1660763561000	Marionette	INFO	Listening on port 51730
+WebDriver BiDi listening on ws://localhost:51718
+Read port: 51730
+1660763561218	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileplHLFT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51718/devtools/browser/7d0158a5-19d0-4d34-a278-4ad5bb6e0b2c
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2273: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1660763591552	geckodriver	INFO	Listening on 127.0.0.1:51758
+1660763594614	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51759" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileCdRNia"
+1660763595006	Marionette	INFO	Marionette enabled
+1660763595011	Marionette	INFO	Listening on port 51769
+WebDriver BiDi listening on ws://localhost:51759
+Read port: 51769
+1660763595206	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileCdRNia\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51759/devtools/browser/6fbcd94b-7f9f-4360-a0e0-2aef596e147d
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1660763604195	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660763606327	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660763610320	Marionette	INFO	Stopped listening on port 51769
+1660763635439	geckodriver	INFO	Listening on 127.0.0.1:51825
+1660763638523	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51826" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileCQTxIQ"
+1660763638929	Marionette	INFO	Marionette enabled
+1660763638934	Marionette	INFO	Listening on port 51836
+WebDriver BiDi listening on ws://localhost:51826
+Read port: 51836
+1660763639121	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileCQTxIQ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51826/devtools/browser/68bd97ec-f01f-4f4e-a06b-9007ec6b3046
+1660763650869	Marionette	INFO	Stopped listening on port 51836
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660763657767	geckodriver	INFO	Listening on 127.0.0.1:51868
+1660763660844	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51869" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileWfD8px"
+1660763661218	Marionette	INFO	Marionette enabled
+1660763661224	Marionette	INFO	Listening on port 51879
+WebDriver BiDi listening on ws://localhost:51869
+Read port: 51879
+1660763661411	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileWfD8px\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51869/devtools/browser/700da297-fe88-43c7-b498-1a199a5e7194
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1660763670171	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+1660763671490	Marionette	INFO	Stopped listening on port 51879
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660763699667	geckodriver	INFO	Listening on 127.0.0.1:51933
+1660763702731	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51934" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileaCvHSr"
+1660763703128	Marionette	INFO	Marionette enabled
+1660763703133	Marionette	INFO	Listening on port 51944
+WebDriver BiDi listening on ws://localhost:51934
+Read port: 51944
+1660763703325	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileaCvHSr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51934/devtools/browser/d4c3f75c-a16d-4edc-87e0-4678413ae4f5
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1660763716387	Marionette	INFO	Stopped listening on port 51944
+[Parent 5452, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:723
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660770248003	geckodriver	INFO	Listening on 127.0.0.1:49810
+1660770251056	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "49811" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilewZ5PhY"
+*** You are running in headless mode.
+1660770251749	Marionette	INFO	Marionette enabled
+1660770251754	Marionette	INFO	Listening on port 49821
+WebDriver BiDi listening on ws://localhost:49811
+Read port: 49821
+1660770251878	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilewZ5PhY\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49811/devtools/browser/b110856f-490d-4c8d-9698-e1281cb53169
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+1660770262216	Marionette	INFO	Stopped listening on port 49821
+1660770325350	geckodriver	INFO	Listening on 127.0.0.1:49887
+1660770328412	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "49888" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilebV6IbG"
+*** You are running in headless mode.
+1660770328800	Marionette	INFO	Marionette enabled
+1660770328805	Marionette	INFO	Listening on port 49898
+WebDriver BiDi listening on ws://localhost:49888
+Read port: 49898
+1660770328908	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilebV6IbG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49888/devtools/browser/d46facb2-82ef-4e46-b7f8-6ade11631c2d
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+1660770339411	Marionette	INFO	Stopped listening on port 49898
+1660770451211	geckodriver	INFO	Listening on 127.0.0.1:49966
+1660770454267	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "49967" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileEmUiQb"
+*** You are running in headless mode.
+1660770454688	Marionette	INFO	Marionette enabled
+1660770454693	Marionette	INFO	Listening on port 49977
+WebDriver BiDi listening on ws://localhost:49967
+Read port: 49977
+1660770454809	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileEmUiQb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49967/devtools/browser/d1da7a87-aa86-483f-9fa2-2de0916f2e53
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+1660770464797	Marionette	INFO	Stopped listening on port 49977
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660770496854	geckodriver	INFO	Listening on 127.0.0.1:50029
+1660770499929	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50030" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileOfnlUo"
+1660770500485	Marionette	INFO	Marionette enabled
+1660770500491	Marionette	INFO	Listening on port 50039
+WebDriver BiDi listening on ws://localhost:50030
+Read port: 50039
+1660770500734	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileOfnlUo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50030/devtools/browser/bae62092-d4a3-4533-9504-0796844e97aa
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660770511685	Marionette	INFO	Stopped listening on port 50039
+1660770527051	geckodriver	INFO	Listening on 127.0.0.1:50094
+1660770530109	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50095" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilebF87Ks"
+1660770530528	Marionette	INFO	Marionette enabled
+1660770530534	Marionette	INFO	Listening on port 50105
+WebDriver BiDi listening on ws://localhost:50095
+Read port: 50105
+1660770530748	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilebF87Ks\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50095/devtools/browser/7b00a42c-8349-41ba-9ba0-f0c552104240
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1660770542312	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660770543598	Marionette	INFO	Stopped listening on port 50105
+1660770619416	geckodriver	INFO	Listening on 127.0.0.1:50159
+1660770622473	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50160" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile0l72ar"
+1660770622850	Marionette	INFO	Marionette enabled
+1660770622856	Marionette	INFO	Listening on port 50170
+WebDriver BiDi listening on ws://localhost:50160
+Read port: 50170
+1660770623046	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile0l72ar\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50160/devtools/browser/855b0ce3-d4eb-4936-8164-e28dcc9fa36a
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+1660770636253	Marionette	INFO	Stopped listening on port 50170
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660770725736	geckodriver	INFO	Listening on 127.0.0.1:50266
+1660770728820	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50267" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileQkKvcq"
+1660770729240	Marionette	INFO	Marionette enabled
+1660770729245	Marionette	INFO	Listening on port 50279
+WebDriver BiDi listening on ws://localhost:50267
+Read port: 50279
+1660770729431	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileQkKvcq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50267/devtools/browser/8c7f6a46-227d-401f-a9cb-d953f00dfbbd
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1660770750615	Marionette	INFO	Stopped listening on port 50279
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660770756490	geckodriver	INFO	Listening on 127.0.0.1:50318
+1660770759550	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50319" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileRq4iPj"
+1660770759932	Marionette	INFO	Marionette enabled
+1660770759937	Marionette	INFO	Listening on port 50330
+WebDriver BiDi listening on ws://localhost:50319
+Read port: 50330
+1660770760117	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileRq4iPj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50319/devtools/browser/1ac6a026-c6ce-4bc8-97c1-53f1f4f5162e
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660770770671	Marionette	INFO	Stopped listening on port 50330
+1660770911339	geckodriver	INFO	Listening on 127.0.0.1:50399
+1660770914426	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50400" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileJEfklv"
+1660770914811	Marionette	INFO	Marionette enabled
+1660770914816	Marionette	INFO	Listening on port 50410
+WebDriver BiDi listening on ws://localhost:50400
+Read port: 50410
+1660770915006	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileJEfklv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50400/devtools/browser/78b2bc59-6329-4963-a67f-2a2114b9a44d
+1660770924477	Marionette	INFO	Stopped listening on port 50410
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660770926237	geckodriver	INFO	Listening on 127.0.0.1:50443
+1660770929299	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50444" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileFeY3S6"
+1660770929683	Marionette	INFO	Marionette enabled
+1660770929687	Marionette	INFO	Listening on port 50454
+WebDriver BiDi listening on ws://localhost:50444
+Read port: 50454
+1660770929884	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileFeY3S6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50444/devtools/browser/132f00cd-0508-46b0-8736-9e9a6afc90e0
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660770983171	Marionette	INFO	Stopped listening on port 50451660770984339	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50518" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilelkYePr"
+1660770984766	Marionette	INFO	Marionette enabled
+1660770984771	Marionette	INFO	Listening on port 50529
+WebDriver BiDi listening on ws://localhost:50518
+Read port: 50529
+1660770984995	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilelkYePr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50518/devtools/browser/954dda8b-d575-4e79-9680-22ea99634c45
+1660770988944	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1660771009774	Marionette	INFO	Stopped listening on port 50529
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660771012070	geckodriver	INFO	Listening on 127.0.0.1:50571
+1660771015139	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50572" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile7idZxg"
+1660771015523	Marionette	INFO	Marionette enabled
+1660771015528	Marionette	INFO	Listening on port 50582
+WebDriver BiDi listening on ws://localhost:50572
+Read port: 50582
+1660771015717	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile7idZxg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50572/devtools/browser/c8157d75-9f1d-4010-a239-777aa8692374
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+1660771024807	Marionette	INFO	Stopped listening on port 50582
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:337:29
+
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660771419584	geckodriver	INFO	Listening on 127.0.0.1:50673
+1660771422641	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50674" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile98xDKh"
+1660771423208	Marionette	INFO	Marionette enabled
+1660771423215	Marionette	INFO	Listening on port 50686
+WebDriver BiDi listening on ws://localhost:50674
+Read port: 50686
+1660771423619	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile98xDKh\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50674/devtools/browser/bedbcc99-bdd6-4163-bbcb-e9539c3e263a
+1660771427953	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1660771437958	Marionette	INFO	Stopped listening on port 50686
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660771439475	geckodriver	INFO	Listening on 127.0.0.1:50727
+1660771442528	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50728" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileYYbCPG"
+1660771442916	Marionette	INFO	Marionette enabled
+1660771442921	Marionette	INFO	Listening on port 50738
+WebDriver BiDi listening on ws://localhost:50728
+Read port: 50738
+1660771443107	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileYYbCPG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50728/devtools/browser/1d352ad7-8ab1-40a8-9fdf-07830fecf3de
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660771453793	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660771455011	Marionette	INFO	Stopped listening on port 50738
+1660771480302	geckodriver	INFO	Listening on 127.0.0.1:50796
+1660771483362	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50797" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilehjF1q5"
+1660771483745	Marionette	INFO	Marionette enabled
+1660771483750	Marionette	INFO	Listening on port 50807
+WebDriver BiDi listening on ws://localhost:50797
+Read port: 50807
+1660771483939	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofilehjF1q5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50797/devtools/browser/5febd7be-0640-482a-9fe6-8b8b0b6bd6ba
+1660771488033	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:237:24
+TimedPromise@chrome://remote/content/marionette/sync.js:222:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660771495903	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660771505209	Marionette	INFO	Stopped listening on port 50807
+1660771562996	geckodriver	INFO	Listening on 127.0.0.1:50859
+1660771566083	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50860" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile6HSm5p"
+1660771566492	Marionette	INFO	Marionette enabled
+1660771566497	Marionette	INFO	Listening on port 50870
+WebDriver BiDi listening on ws://localhost:50860
+Read port: 50870
+1660771566704	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofile6HSm5p\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50860/devtools/browser/6d35a0a9-66b8-4f0d-81ee-d8edc2915375
+1660771582935	Marionette	INFO	Stopped listening on port 50870
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1660771587442	geckodriver	INFO	Listening on 127.0.0.1:50903
+1660771590484	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50904" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileTLVJHU"
+1660771590883	Marionette	INFO	Marionette enabled
+1660771590888	Marionette	INFO	Listening on port 50914
+WebDriver BiDi listening on ws://localhost:50904
+Read port: 50914
+1660771591079	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\diedi\\AppData\\Local\\Temp\\rust_mozprofileTLVJHU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50904/devtools/browser/be013c35-8063-4ff5-9eb1-a75eee63d329
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.instagram.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 831: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3i9bR4/yS/l/es_ES/N0y4BK7KRDQ.js?_nc_x=Ij3Wp8lg5Kz, line 1164: unreachable code after return statement
+JavaScript warning: https://static.cdninstagram.com/rsrc.php/v3ifco4/y2/l/es_ES/qqUbEZwhdeM.js?_nc_x=Ij3Wp8lg5Kz, line 40: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660771601611	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1660771610855	Marionette	INFO	Stopped listening on port 50914
