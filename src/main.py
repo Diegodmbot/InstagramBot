@@ -10,12 +10,15 @@ def create_webdriver():
 
 def main():
   username = input("User: ")
-  password = input("Password: ")
+  password = ""
+  while len(password) < 6:
+    password = input("Password: ")
   browser = create_webdriver()
   bot = InstagramBot(username, password, browser)
   bot.run_browser()
   bot.accept_cookies()
-  bot.login()
+  while not bot.login():
+    pass
   bot.follow_user()
   bot.take_screenshot()
   bot.close_browser()

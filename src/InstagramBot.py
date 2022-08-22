@@ -17,7 +17,15 @@ class InstagramBot:
     sleep(1)
     login_button = self.browser.find_element(By.XPATH,'/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button')
     login_button.click()
+    if self.browser.find_element(By.XPATH, '/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button'):
+      print("Wrong username or password")
+      self.username = input("User: ")
+      self.password = ""
+      while len(self.password) < 6:
+        self.password = input("Password: ")
+      return False
     print("You are logged in")
+    return True
   def accept_cookies(self):
     cookies_button = self.browser.find_element(By.XPATH, '/html/body/div[4]/div/div/button[1]')
     cookies_button.click()
