@@ -1,0 +1,5 @@
+*.exe
+*.log
+config/**
+src/__pycache__/**
+*.png
