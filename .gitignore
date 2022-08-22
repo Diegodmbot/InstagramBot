@@ -1,4 +1,3 @@
-*.exe
 *.log
 config/**
 src/__pycache__/**

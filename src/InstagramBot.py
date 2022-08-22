@@ -33,7 +33,6 @@ class InstagramBot:
   def follow_user(self):
     user = input("Enter the user you want to follow: ")
     self.browser.get('https://www.instagram.com/' + user)
-    sleep(2)
     follow_button = self.browser.find_element(By.XPATH, '//div[text()="Seguir"]')
     follow_button.click()
     print("You are following " + user)
