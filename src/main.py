@@ -4,7 +4,7 @@ from selenium.webdriver.firefox.options import Options
 
 def create_webdriver():
   browser_options = Options()
-  browser_options.add_argument("--headless")
+  #browser_options.add_argument("--headless")
   browser = webdriver.Firefox(options=browser_options)
   return browser
 
@@ -26,6 +26,5 @@ def main():
 main()
 
 # TODO:
-  # Comprobar que se inicia sesión
   # Mirar si ya se está siguiendo al usuario
   # Comprobar que el input es correcto para seguir al usuario

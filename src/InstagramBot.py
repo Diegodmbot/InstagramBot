@@ -6,6 +6,9 @@ class InstagramBot:
     self.username = username
     self.password = password
     self.browser = browser
+  def set_password(self):
+    while len(self.password) < 6:
+      self.password = input("Password: ")
   def run_browser(self):
     self.browser.implicitly_wait(5)
     self.browser.get('https://www.instagram.com/')
@@ -14,18 +17,23 @@ class InstagramBot:
     password_input = self.browser.find_element(By.XPATH,'//input[@name="password"]')
     username_input.send_keys(self.username)
     password_input.send_keys(self.password)
-    sleep(1)
+    sleep(1.5)
     login_button = self.browser.find_element(By.XPATH,'/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button')
     login_button.click()
-    if self.browser.find_element(By.XPATH, '/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button'):
+    # Si el boton de login está visible, es que no se ha iniciado sesión
+    sleep(3)
+    try: 
+      self.browser.find_element(By.XPATH, '/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button')
+      username_input.clear()
+      password_input.clear()
       print("Wrong username or password")
       self.username = input("User: ")
       self.password = ""
-      while len(self.password) < 6:
-        self.password = input("Password: ")
+      self.set_password()
       return False
-    print("You are logged in")
-    return True
+    except:
+      print("You are logged in")
+      return True
   def accept_cookies(self):
     cookies_button = self.browser.find_element(By.XPATH, '/html/body/div[4]/div/div/button[1]')
     cookies_button.click()
@@ -44,3 +52,4 @@ class InstagramBot:
     follow_button = self.browser.find_element(By.XPATH, '//div[text()="Seguir"]')
     follow_button.click()
     print("You are following " + user)
+    return True
