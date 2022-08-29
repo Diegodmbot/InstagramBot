@@ -19,8 +19,10 @@ def main():
   bot.accept_cookies()
   while not bot.login():
     pass
-  bot.follow_user()
-  bot.take_screenshot()
+  #bot.get_followers_number()
+  bot.follow_followers()
+  #bot.follow_user()
+  #bot.take_screenshot()
   bot.close_browser()
 
 main()
@@ -28,3 +30,5 @@ main()
 # TODO:
   # Mirar si ya se está siguiendo al usuario
   # Comprobar que el input es correcto para seguir al usuario
+  # Seguir a todos los usuarios que siguen a un usuario
+  # Subir una foto
