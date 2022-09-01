@@ -1,10 +1,12 @@
 from InstagramBot import InstagramBot
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+import os
 
-def create_webdriver():
+def create_webdriver(headless):
   browser_options = Options()
-  # addbrowser_options.add_argument("--headless")
+  if headless:
+    browser_options.add_argument("--headless")
   browser = webdriver.Firefox(options=browser_options)
   return browser
 
@@ -13,21 +15,40 @@ def main():
   password = ""
   while len(password) < 6:
     password = input("Password: ")
-  browser = create_webdriver()
+  headless_flag = input("Headless mode? (y/n): ")
+  browser = create_webdriver(headless_flag == "y")
   bot = InstagramBot(username, password, browser)
   bot.run_browser()
   bot.accept_cookies()
   while not bot.login():
     pass
-  #print("Número de seguidores: " + str(bot.get_followers_number()))
-  bot.follow_followers()
-  #bot.follow_user()
-  #bot.take_screenshot()
-  bot.close_browser()
+  os.system("cls")
+  # MENU
+  while True:
+    print("MENU " + bot.username.upper())
+    print("1. Follow user")
+    print("2. Take screenshot")
+    print("3. Follow followers")
+    print("4. Get followers number")
+    print("5. Exit")
+    option = input("Option: ")
+    if option == "1":
+      bot.follow_user()
+    elif option == "2":
+      screenshot_name = input("Name of the screenshot: ")
+      bot.take_screenshot(screenshot_name)
+    elif option == "3":
+      bot.follow_followers()
+    elif option == "4":
+      print("Número de seguidores: " + str(bot.get_followers_number()))
+    elif option == "5":
+      bot.close_browser()
+      break
+    else:
+      print("Invalid option")
 
 main()
 
 # TODO:
   # Comprobar que el input es correcto para seguir al usuario
-  # Seguir a todos los usuarios que siguen a un usuario
   # Subir una foto
