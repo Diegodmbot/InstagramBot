@@ -52,3 +52,4 @@ main()
 # TODO:
   # Comprobar que el input es correcto para seguir al usuario
   # Subir una foto
+  # refactorizar el metodo de seguir usuarios
