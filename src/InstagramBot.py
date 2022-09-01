@@ -49,6 +49,9 @@ class InstagramBot:
   # Seguir a un usuario
   def follow_user(self):
     user = input("User: ")
+    if user.find(' ') != -1:
+      print("User must be a word")
+      return False
     self.browser.get('https://www.instagram.com/' + user)
     try:
       follow_button = self.browser.find_element(By.XPATH, '//div[text()="Seguir"]')
