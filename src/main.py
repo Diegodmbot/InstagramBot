@@ -4,7 +4,7 @@ from selenium.webdriver.firefox.options import Options
 
 def create_webdriver():
   browser_options = Options()
-  #browser_options.add_argument("--headless")
+  # addbrowser_options.add_argument("--headless")
   browser = webdriver.Firefox(options=browser_options)
   return browser
 
@@ -19,7 +19,7 @@ def main():
   bot.accept_cookies()
   while not bot.login():
     pass
-  #bot.get_followers_number()
+  #print("Número de seguidores: " + str(bot.get_followers_number()))
   bot.follow_followers()
   #bot.follow_user()
   #bot.take_screenshot()
@@ -28,7 +28,6 @@ def main():
 main()
 
 # TODO:
-  # Mirar si ya se está siguiendo al usuario
   # Comprobar que el input es correcto para seguir al usuario
   # Seguir a todos los usuarios que siguen a un usuario
   # Subir una foto
