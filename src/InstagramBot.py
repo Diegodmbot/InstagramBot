@@ -46,12 +46,8 @@ class InstagramBot:
     sleep(2)
     followers_list = self.browser.find_elements(By.XPATH, '//a[@href="/' + self.username + '/followers/"]')
     return int(followers_list[0].text.split(' ')[0])
-  # Seguir a un usuario
-  def follow_user(self):
-    user = input("User: ")
-    if user.find(' ') != -1:
-      print("User must be a word")
-      return False
+  # Seguir a un usuario introduciendo su nombre
+  def follow_user(self, user):
     self.browser.get('https://www.instagram.com/' + user)
     try:
       follow_button = self.browser.find_element(By.XPATH, '//div[text()="Seguir"]')
@@ -59,15 +55,42 @@ class InstagramBot:
       print("You are following " + user)
       return True
     except:
-      print("You are already following " + user)
       return False
-  # seguir a los followers de un usuario
+  # Seguir a un usuario que ya te sigue
+  def follow_user_following(self, follower):
+    self.browser.get('https://www.instagram.com/' + follower)
+    try:
+        follow_button = self.browser.find_element(By.XPATH, '//div[text()="Seguir también"]')
+        follow_button.click()
+        try:
+          self.browser.find_element(By.XPATH, '//div[text()="Restringimos determinada actividad para proteger a nuestra comunidad."]')
+          return False
+        except:
+          print("You are following " + follower)
+    except:
+        return False
+    sleep(2)
+    return True
+  # seguir a los seguidores de un usuario
   def follow_followers(self):
     number_of_followers = self.get_followers_number()
     self.browser.get('https://www.instagram.com/' + self.username + '/followers')
     sleep(2)
-    # scroll down
-    # https://medium.com/jacklee26/selenium-instagram-followers-and-following-list-52c335a4ec03
+    self.scroll_down()
+    # Guarda a los followers en un array
+    followers = []
+    j = 1
+    while j < number_of_followers:
+      followers_list = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[' + str(j) +']/div[2]/div[1]/div/div/span/a/span/div')
+      followers.append(followers_list.text)
+      j += 1
+    # Seguir a los followers
+    for follower in followers:
+      if self.follow_user_following(follower) == False: 
+        break
+    return True
+  # https://medium.com/jacklee26/selenium-instagram-followers-and-following-list-52c335a4ec03
+  def scroll_down(self):
     scroll_box = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]')
     last_ht, ht = 0, 1
     print("Scrolling...")
@@ -79,26 +102,4 @@ class InstagramBot:
       arguments[0].scrollTo(0, arguments[0].scrollHeight);
       return arguments[0].scrollHeight; """, scroll_box)
     sleep(1)
-    # Guarda a los followers en un array
-    followers = []
-    j = 1
-    while j < number_of_followers:
-      followers_list = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[' + str(j) +']/div[2]/div[1]/div/div/span/a/span/div')
-      followers.append(followers_list.text)
-      j += 1
-    # Seguir a los followers
-    for follower in followers:
-      self.browser.get('https://www.instagram.com/' + follower)
-      try:
-        follow_button = self.browser.find_element(By.XPATH, '//div[text()="Seguir también"]')
-        follow_button.click()
-        try:
-          self.browser.find_element(By.XPATH, '//div[text()="Restringimos determinada actividad para proteger a nuestra comunidad."]')
-          return False
-        except:
-          print("You are following " + follower)
-      except:
-        print("You are already following " + follower)
-      sleep(2)
     return True
-  

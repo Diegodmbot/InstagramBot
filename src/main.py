@@ -28,17 +28,20 @@ def main():
     print("MENU " + bot.username.upper())
     print("1. Follow user")
     print("2. Take screenshot")
-    print("3. Follow followers")
+    print("3. Follow my followers")
     print("4. Get followers number")
     print("5. Exit")
     option = input("Option: ")
     if option == "1":
-      bot.follow_user()
+      user = input("User: ")
+      if bot.follow_user(user) == False:
+        print("Cannot follow user")
     elif option == "2":
       screenshot_name = input("Name of the screenshot: ")
       bot.take_screenshot(screenshot_name)
     elif option == "3":
-      bot.follow_followers()
+      if bot.follow_followers() == False:
+        print("Cannot follow followers")
     elif option == "4":
       print("Número de seguidores: " + str(bot.get_followers_number()))
     elif option == "5":
@@ -51,4 +54,3 @@ main()
 
 # TODO:
   # Subir una foto
-  # refactorizar el metodo de seguir usuarios
