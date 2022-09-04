@@ -11,6 +11,7 @@ def create_webdriver(headless):
   return browser
 
 def main():
+  os.system("cls")
   username = input("User: ")
   password = ""
   while len(password) < 6:
@@ -30,7 +31,8 @@ def main():
     print("2. Take screenshot")
     print("3. Follow my followers")
     print("4. Get followers number")
-    print("5. Exit")
+    print("5. Unfollow user")
+    print("6. Exit")
     option = input("Option: ")
     if option == "1":
       user = input("User: ")
@@ -45,6 +47,10 @@ def main():
     elif option == "4":
       print("Número de seguidores: " + str(bot.get_followers_number()))
     elif option == "5":
+      user = input("User: ")
+      if bot.unfollow_user(user) == False:
+        print("Cannot unfollow user")
+    elif option == "6":
       bot.close_browser()
       break
     else:

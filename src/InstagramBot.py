@@ -72,7 +72,7 @@ class InstagramBot:
     sleep(2)
     return True
   # seguir a los seguidores de un usuario
-  def follow_followers(self):
+  def follow_all_followers(self):
     number_of_followers = self.get_followers_number()
     self.browser.get('https://www.instagram.com/' + self.username + '/followers')
     sleep(2)
@@ -89,6 +89,18 @@ class InstagramBot:
       if self.follow_user_following(follower) == False: 
         break
     return True
+  def unfollow_user(self, user):
+    self.browser.get('https://www.instagram.com/' + user)
+    try:
+      follow_button = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[1]/section/main/div/header/section/div[1]/div[1]/div/div[2]/button')
+      follow_button.click()
+      sleep(1)
+      unfollow_button = self.browser.find_element(By.XPATH, '//button[text()="Dejar de seguir"]')
+      unfollow_button.click()
+      print("You are not following " + user)
+      return True
+    except:
+      return False
   # https://medium.com/jacklee26/selenium-instagram-followers-and-following-list-52c335a4ec03
   def scroll_down(self):
     scroll_box = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]')
@@ -103,3 +115,22 @@ class InstagramBot:
       return arguments[0].scrollHeight; """, scroll_box)
     sleep(1)
     return True
+  # Subir fotos con el formato 1:1 de una carpeta
+  def upload_pictures(self):
+    self.browser.get('https://www.instagram.com/')
+    sleep(2)
+    upload_photo_button = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[1]/section/nav/div[2]/div/div/div[3]/div/div[3]/div/button')
+    upload_photo_button.click()
+    # Seleccionar la imagen
+    #
+    next_button = self.browser.find_element(By.XPATH, '//button[text()="Siguiente"]')
+    next_button.click()
+    # Editar la imagen
+    next_button.click()
+    # Pie de pagina
+    bottom_pic_input = self.browser.find_element(By.XPATH, '//textarea[@placeholder="Escribe un comentario..."]')
+    bottom_pic = input("Escribe un comentario para la foto: ")
+    bottom_pic_input.send_keys(bottom_pic)
+    # Publicar
+    share_button = self.browser.find_element(By.XPATH, '//button[text()="Compartir"]')
+    share_button.click()
