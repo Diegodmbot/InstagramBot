@@ -1,7 +1,6 @@
-from multiprocessing.connection import wait
-from sys import excepthook
 from time import sleep
 from selenium.webdriver.common.by import By
+import os
 
 class InstagramBot:
   def __init__(self, username, password, browser):
@@ -18,16 +17,14 @@ class InstagramBot:
     username_input.send_keys(self.username)
     password_input.send_keys(self.password)
     sleep(1.5)
-    login_button = self.browser.find_element(By.XPATH,'/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button')
-    login_button.click()
+    self.browser.find_element(By.XPATH,'/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button').click()
     # El tiempo de este sleep es importante, si es muy corto no se loguea
     sleep(2)
     print("You are logged in")
     return True
   # Aceptar cookies (Solo las necesarias)
   def accept_cookies(self):
-    cookies_button = self.browser.find_element(By.XPATH, '/html/body/div[4]/div/div/button[1]')
-    cookies_button.click()
+    self.browser.find_element(By.XPATH, '/html/body/div[4]/div/div/button[1]').click()
     print("Cookies accepted")
   # Cerrar el navegador
   def close_browser(self):
@@ -50,8 +47,7 @@ class InstagramBot:
   def follow_user(self, user):
     self.browser.get('https://www.instagram.com/' + user)
     try:
-      follow_button = self.browser.find_element(By.XPATH, '//div[text()="Seguir"]')
-      follow_button.click()
+      self.browser.find_element(By.XPATH, '//div[text()="Seguir"]').click()
       print("You are following " + user)
       return True
     except:
@@ -60,13 +56,12 @@ class InstagramBot:
   def follow_user_following(self, follower):
     self.browser.get('https://www.instagram.com/' + follower)
     try:
-        follow_button = self.browser.find_element(By.XPATH, '//div[text()="Seguir también"]')
-        follow_button.click()
-        try:
-          self.browser.find_element(By.XPATH, '//div[text()="Restringimos determinada actividad para proteger a nuestra comunidad."]')
-          return False
-        except:
-          print("You are following " + follower)
+      self.browser.find_element(By.XPATH, '//div[text()="Seguir también"]').click()
+      try:
+        self.browser.find_element(By.XPATH, '//div[text()="Restringimos determinada actividad para proteger a nuestra comunidad."]')
+        return False
+      except:
+        print("You are following " + follower)
     except:
         return False
     sleep(2)
@@ -92,11 +87,9 @@ class InstagramBot:
   def unfollow_user(self, user):
     self.browser.get('https://www.instagram.com/' + user)
     try:
-      follow_button = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[1]/section/main/div/header/section/div[1]/div[1]/div/div[2]/button')
-      follow_button.click()
+      self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[1]/section/main/div/header/section/div[1]/div[1]/div/div[2]/button').click()
       sleep(1)
-      unfollow_button = self.browser.find_element(By.XPATH, '//button[text()="Dejar de seguir"]')
-      unfollow_button.click()
+      self.browser.find_element(By.XPATH, '//button[text()="Dejar de seguir"]').click()
       print("You are not following " + user)
       return True
     except:
@@ -116,21 +109,23 @@ class InstagramBot:
     sleep(1)
     return True
   # Subir fotos con el formato 1:1 de una carpeta
-  def upload_pictures(self):
-    self.browser.get('https://www.instagram.com/')
+  def upload_photo(self, photo_name, caption):
     sleep(2)
-    upload_photo_button = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[1]/section/nav/div[2]/div/div/div[3]/div/div[3]/div/button')
-    upload_photo_button.click()
+    self.browser.find_element(By.XPATH, '/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[3]/div/button').click()
     # Seleccionar la imagen
-    #
-    next_button = self.browser.find_element(By.XPATH, '//button[text()="Siguiente"]')
-    next_button.click()
+    add_file_button = self.browser.find_element(By.XPATH, '/html/body/div[8]/div[2]/div/div/div/div[2]/div[1]/form/input')
+    add_file_button.send_keys(os.getcwd() + '\\img\\' + photo_name)
+    self.browser.find_element(By.XPATH, '//button[text()="Siguiente"]').click()
     # Editar la imagen
-    next_button.click()
+    sleep(2)
+    self.browser.find_element(By.XPATH, '//button[text()="Siguiente"]').click()
     # Pie de pagina
-    bottom_pic_input = self.browser.find_element(By.XPATH, '//textarea[@placeholder="Escribe un comentario..."]')
-    bottom_pic = input("Escribe un comentario para la foto: ")
-    bottom_pic_input.send_keys(bottom_pic)
+    bottom_pic_input = self.browser.find_element(By.XPATH, '//textarea[@placeholder="Escribe un pie de foto..."]')
+    bottom_pic_input.send_keys(caption)
     # Publicar
-    share_button = self.browser.find_element(By.XPATH, '//button[text()="Compartir"]')
-    share_button.click()
+    self.browser.find_element(By.XPATH, '//button[text()="Compartir"]').click()
+    try:
+      self.browser.find_element(By.XPATH, '//div[text()="Se ha compartido tu publicación."]')
+      return True
+    except:
+      return False

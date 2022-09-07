@@ -1,6 +1,6 @@
 from InstagramBot import InstagramBot
-from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+from time import sleep
 import os
 
 def create_webdriver(headless):
@@ -32,7 +32,8 @@ def main():
     print("3. Follow my followers")
     print("4. Get followers number")
     print("5. Unfollow user")
-    print("6. Exit")
+    print("6. Upload photo")
+    print("7. Exit")
     option = input("Option: ")
     if option == "1":
       user = input("User: ")
@@ -51,12 +52,22 @@ def main():
       if bot.unfollow_user(user) == False:
         print("Cannot unfollow user")
     elif option == "6":
+      photo_name = input("Photo name: ")
+      caption = input("Caption: ")
+      if bot.upload_photo(photo_name, caption) == True:
+        print("Photo uploaded")
+      else:
+        print("Cannot upload photo")
+    elif option == "7":
       bot.close_browser()
       break
     else:
       print("Invalid option")
+    sleep(3)
+    os.system("cls")
 
 main()
 
 # TODO:
-  # Subir una foto
+  # Cuando se hace login se puede guardar la sesión para no tener que loguearse cada vez
+  # Métele un NLP para que analice los comentarios y los blauee o les de a like dependiendo de si son buenos o malos
