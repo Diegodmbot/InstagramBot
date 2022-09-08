@@ -11,47 +11,39 @@ def create_webdriver(headless):
   browser = webdriver.Firefox(options=browser_options)
   return browser
 
-def main():
-  os.system("cls")
-  username = input("User: ")
-  password = ""
-  while len(password) < 6:
-    password = input("Password: ")
-  headless_flag = input("Headless mode? (y/n): ")
-  browser = create_webdriver(headless_flag == "y")
-  bot = InstagramBot(username, password, browser)
-  bot.run_browser()
-  bot.accept_cookies()
-  while not bot.login():
-    pass
-  os.system("cls")
-  # MENU
+def menu(bot):
   while True:
     print("MENU " + bot.username.upper())
-    print("1. Follow user")
-    print("2. Take screenshot")
-    print("3. Follow my followers")
-    print("4. Get followers number")
-    print("5. Unfollow user")
+    print("1. Take screenshot")
+    print("2. Get followers number")
+    print("3. Follow user")
+    print("4. Unfollow user")
+    print("5. Follow my followers")
     print("6. Upload photo")
     print("7. Exit")
     option = input("Option: ")
     if option == "1":
-      user = input("User: ")
-      if bot.follow_user(user) == False:
-        print("Cannot follow user")
-    elif option == "2":
-      screenshot_name = input("Name of the screenshot: ")
+      screenshot_name = input("Screenshot name: ")
       bot.take_screenshot(screenshot_name)
-    elif option == "3":
-      if bot.follow_followers() == False:
-        print("Cannot follow followers")
-    elif option == "4":
+    elif option == "2":
       print("Número de seguidores: " + str(bot.get_followers_number()))
-    elif option == "5":
+    elif option == "3":
       user = input("User: ")
-      if bot.unfollow_user(user) == False:
+      if bot.follow_user(user) == True:
+        print("User: @" + user + " followed")
+      else:
+        print("Cannot follow user")
+    elif option == "4":
+      user = input("User: ")
+      if bot.unfollow_user(user) == True:
+        print("User: @" + user + " unfollowed")
+      else:
         print("Cannot unfollow user")
+    elif option == "5":
+      if bot.follow_followers() == True:
+        print("Followed all your followers")
+      else:
+        print("Error ocurred")
     elif option == "6":
       photo_name = input("Photo name: ")
       caption = input("Caption: ")
@@ -67,8 +59,26 @@ def main():
     sleep(3)
     os.system("cls")
 
+def main():
+  os.system("cls")
+  username = input("User: ")
+  password = ""
+  while len(password) < 6:
+    password = input("Password: ")
+  headless_flag = input("Headless mode? (y/n): ")
+  browser = create_webdriver(headless_flag == "y")
+  bot = InstagramBot(username, password, browser)
+  bot.run_browser()
+  bot.accept_cookies()
+  while not bot.login():
+    pass
+  os.system("cls")
+  menu(bot)
+  
+
 main()
 
 # TODO:
   # Cuando se hace login se puede guardar la sesión para no tener que loguearse cada vez
-  # Métele un NLP para que analice los comentarios y los blauee o les de a like dependiendo de si son buenos o malos
+  # Script para eliminar las fotos de un directorio local
+  # darle forma a todo el código
