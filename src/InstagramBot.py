@@ -20,12 +20,27 @@ class InstagramBot:
     self.browser.find_element(By.XPATH,'/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button').click()
     # El tiempo de este sleep es importante, si es muy corto no se loguea
     sleep(2)
+    while self.is_not_logged():
+      sleep(1)
     print("You are logged in")
+    self.save_login()
+    self.not_aceppt_notifications()
     return True
+  def is_not_logged(self):
+    try:
+      self.browser.find_element(By.XPATH, '//input[@name="username"]')
+      return True
+    except:
+      return False
   # Aceptar cookies (Solo las necesarias)
   def accept_cookies(self):
     self.browser.find_element(By.XPATH, '/html/body/div[4]/div/div/button[1]').click()
     print("Cookies accepted")
+  # Guarda información de la sesión para que no se tenga que loguear cada vez
+  def save_login(self):
+    self.browser.find_element(By.XPATH, '/html/body/div[1]/section/main/div/div/div/section/div/button').click()
+  def not_aceppt_notifications(self):
+    self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[2]').click()
   # Cerrar el navegador
   def close_browser(self):
     sleep(3)
