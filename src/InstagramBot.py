@@ -7,6 +7,25 @@ class InstagramBot:
     self.username = username
     self.password = password
     self.browser = browser
+  # Devuelve el número de followers
+  def get_followers_number(self):
+    self.browser.get('https://www.instagram.com/' + self.username + '/followers')
+    sleep(2)
+    followers_list = self.browser.find_elements(By.XPATH, '//a[@href="/' + self.username + '/followers/"]')
+    return int(followers_list[0].text.split(' ')[0])
+  # devuelve una lista con los followers
+  def get_followers(self):
+    number_of_followers = self.get_followers_number()
+    self.browser.get('https://www.instagram.com/' + self.username + '/followers')
+    sleep(2)
+    self.scroll_down()
+    followers = []
+    j = 1
+    while j < number_of_followers:
+      followers_list = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[' + str(j) +']/div[2]/div[1]/div/div/span/a/span/div')
+      followers.append(followers_list.text)
+      j += 1
+    return followers
   def run_browser(self):
     self.browser.implicitly_wait(10)
     self.browser.get('https://www.instagram.com/')
@@ -52,13 +71,26 @@ class InstagramBot:
     self.browser.save_screenshot(screenshot_name + '.png')
     print("Screenshot taken")
     return True
-  # Devuelve el número de followers
-  def get_followers_number(self):
-    self.browser.get('https://www.instagram.com/' + self.username + '/followers')
-    sleep(2)
-    followers_list = self.browser.find_elements(By.XPATH, '//a[@href="/' + self.username + '/followers/"]')
-    return int(followers_list[0].text.split(' ')[0])
-  # Seguir a un usuario introduciendo su nombre
+  # Bajar hasta el final de la página
+  # https://medium.com/jacklee26/selenium-instagram-followers-and-following-list-52c335a4ec03
+  def scroll_down(self):
+    try:
+      scroll_box = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]')
+      last_ht, ht = 0, 1
+      while last_ht != ht:
+        last_ht = ht
+        sleep(2)
+        # script en js para hacer scroll
+        ht = self.browser.execute_script(""" 
+        arguments[0].scrollTo(0, arguments[0].scrollHeight);
+        return arguments[0].scrollHeight; """, scroll_box)
+      sleep(1)
+      return True
+    except:
+      return False
+  ##############################################################################
+  #                          FUNCIONES PARA SEGUIR                             #
+  ##############################################################################
   def follow_user(self, user):
     self.browser.get('https://www.instagram.com/' + user)
     try:
@@ -66,9 +98,9 @@ class InstagramBot:
       print("You are following " + user)
       return True
     except:
-      return False
+        return self.follow_follower(user) 
   # Seguir a un usuario que ya te sigue
-  def follow_user_following(self, follower):
+  def follow_follower(self, follower):
     self.browser.get('https://www.instagram.com/' + follower)
     try:
       self.browser.find_element(By.XPATH, '//div[text()="Seguir también"]').click()
@@ -81,24 +113,15 @@ class InstagramBot:
         return False
     sleep(2)
     return True
-  # seguir a los seguidores de un usuario
+  # seguir a todos los seguidores del usuario
   def follow_all_followers(self):
-    number_of_followers = self.get_followers_number()
-    self.browser.get('https://www.instagram.com/' + self.username + '/followers')
-    sleep(2)
-    self.scroll_down()
-    # Guarda a los followers en un array
-    followers = []
-    j = 1
-    while j < number_of_followers:
-      followers_list = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[' + str(j) +']/div[2]/div[1]/div/div/span/a/span/div')
-      followers.append(followers_list.text)
-      j += 1
-    # Seguir a los followers
-    for follower in followers:
-      if self.follow_user_following(follower) == False: 
-        break
-    return True
+    try:
+      followers = self.get_followers()
+      # Seguir a los followers
+      for follower in followers:
+        self.follow_follower(follower)
+    except:
+      return False
   def unfollow_user(self, user):
     self.browser.get('https://www.instagram.com/' + user)
     try:
@@ -109,20 +132,9 @@ class InstagramBot:
       return True
     except:
       return False
-  # https://medium.com/jacklee26/selenium-instagram-followers-and-following-list-52c335a4ec03
-  def scroll_down(self):
-    scroll_box = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]')
-    last_ht, ht = 0, 1
-    print("Scrolling...")
-    while last_ht != ht:
-      last_ht = ht
-      sleep(2)
-      # script en js para hacer scroll
-      ht = self.browser.execute_script(""" 
-      arguments[0].scrollTo(0, arguments[0].scrollHeight);
-      return arguments[0].scrollHeight; """, scroll_box)
-    sleep(1)
-    return True
+  ##############################################################################
+  #                        FUNCIONES PARA SUBIR FOTOS                          #
+  ##############################################################################
   # Subir fotos con el formato 1:1 de una carpeta
   def upload_photo(self, photo_name, caption):
     sleep(2)

@@ -40,7 +40,7 @@ def menu(bot):
       else:
         print("Cannot unfollow user")
     elif option == "5":
-      if bot.follow_followers() == True:
+      if bot.follow_all_followers() == True:
         print("Followed all your followers")
       else:
         print("Error ocurred")
@@ -79,6 +79,5 @@ def main():
 main()
 
 # TODO:
-  # Cuando se hace login se puede guardar la sesión para no tener que loguearse cada vez
   # Script para eliminar las fotos de un directorio local
-  # darle forma a todo el código
+  # Darle forma a todo el código
