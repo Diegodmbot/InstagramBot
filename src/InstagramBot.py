@@ -7,6 +7,39 @@ class InstagramBot:
     self.username = username
     self.password = password
     self.browser = browser
+  # Iniciar sesión
+  def login(self):
+    username_input = self.browser.find_element(By.XPATH, '//input[@name="username"]')
+    password_input = self.browser.find_element(By.XPATH,'//input[@name="password"]')
+    username_input.send_keys(self.username)
+    password_input.send_keys(self.password)
+    sleep(1.5)
+    # Hacer click en el botón de iniciar sesión
+    self.browser.find_element(By.XPATH,'/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button').click()
+    # El tiempo de este sleep es importante, si es muy corto no se loguea
+    sleep(2)
+    while self.is_not_logged():
+      sleep(1)
+    print("You are logged in")
+    self.save_login()
+    self.not_aceppt_notifications()
+    return True
+  def run_browser(self):
+    self.browser.implicitly_wait(10)
+    self.browser.get('https://www.instagram.com/')
+  def is_not_logged(self):
+    try:
+      self.browser.find_element(By.XPATH, '//input[@name="username"]')
+      return True
+    except:
+      return False
+  # Aceptar cookies (Solo las necesarias)
+  def accept_cookies(self):
+    self.browser.find_element(By.XPATH, '/html/body/div[4]/div/div/button[1]').click()
+    print("Cookies accepted")
+  ##############################################################################
+  #                                 GETTERS                                    #
+  ##############################################################################
   # Devuelve el número de followers
   def get_followers_number(self):
     self.browser.get('https://www.instagram.com/' + self.username + '/followers')
@@ -26,35 +59,6 @@ class InstagramBot:
       followers.append(followers_list.text)
       j += 1
     return followers
-  def run_browser(self):
-    self.browser.implicitly_wait(10)
-    self.browser.get('https://www.instagram.com/')
-  # Iniciar sesión
-  def login(self):
-    username_input = self.browser.find_element(By.XPATH, '//input[@name="username"]')
-    password_input = self.browser.find_element(By.XPATH,'//input[@name="password"]')
-    username_input.send_keys(self.username)
-    password_input.send_keys(self.password)
-    sleep(1.5)
-    self.browser.find_element(By.XPATH,'/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button').click()
-    # El tiempo de este sleep es importante, si es muy corto no se loguea
-    sleep(2)
-    while self.is_not_logged():
-      sleep(1)
-    print("You are logged in")
-    self.save_login()
-    self.not_aceppt_notifications()
-    return True
-  def is_not_logged(self):
-    try:
-      self.browser.find_element(By.XPATH, '//input[@name="username"]')
-      return True
-    except:
-      return False
-  # Aceptar cookies (Solo las necesarias)
-  def accept_cookies(self):
-    self.browser.find_element(By.XPATH, '/html/body/div[4]/div/div/button[1]').click()
-    print("Cookies accepted")
   # Guarda información de la sesión para que no se tenga que loguear cada vez
   def save_login(self):
     self.browser.find_element(By.XPATH, '/html/body/div[1]/section/main/div/div/div/section/div/button').click()
@@ -136,21 +140,40 @@ class InstagramBot:
   #                        FUNCIONES PARA SUBIR FOTOS                          #
   ##############################################################################
   # Subir fotos con el formato 1:1 de una carpeta
-  def upload_photo(self, photo_name, caption):
-    sleep(2)
-    self.browser.find_element(By.XPATH, '/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[3]/div/button').click()
+  # ERROR: Se suben varias fotos en cada iteración
+  def upload_photo(self, photo_list, caption):
+    # Abrir la página de subir fotos
+    try: 
+      self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[1]/section/nav/div[2]/div/div/div[3]/div/div[3]/div/button').click()
+    except:
+      self.browser.find_element(By.XPATH, '/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[3]/div/button').click()
     # Seleccionar la imagen
-    add_file_button = self.browser.find_element(By.XPATH, '/html/body/div[8]/div[2]/div/div/div/div[2]/div[1]/form/input')
-    add_file_button.send_keys(os.getcwd() + '\\img\\' + photo_name)
+    try:
+      add_first_file_button = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/form/input')
+    except:
+      add_first_file_button = self.browser.find_element(By.XPATH, '/html/body/div[8]/div[2]/div/div/div/div[2]/div[1]/form/input')
+    add_first_file_button.send_keys(os.getcwd() + '\\img\\' + photo_list[0])
+    print("Photo: " + photo_list[0] + " uploaded")
+    # Abrir menu para seleccionar mas fotos
+    self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button').click()
+    add_other_file_button = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/div[1]/div/div/div/div[2]/form/input')
+    for photo in photo_list[1:]:
+      sleep(1)
+      print("Photo: " + photo + " uploaded")
+      add_other_file_button.send_keys(os.getcwd() + '\\img\\' + photo)
     self.browser.find_element(By.XPATH, '//button[text()="Siguiente"]').click()
     # Editar la imagen
     sleep(2)
     self.browser.find_element(By.XPATH, '//button[text()="Siguiente"]').click()
     # Pie de pagina
-    bottom_pic_input = self.browser.find_element(By.XPATH, '//textarea[@placeholder="Escribe un pie de foto..."]')
+    try:
+      bottom_pic_input = self.browser.find_element(By.XPATH, '//textarea[@placeholder="Escribe un pie de foto..."]')
+    except:
+      bottom_pic_input = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/textarea')
     bottom_pic_input.send_keys(caption)
     # Publicar
     self.browser.find_element(By.XPATH, '//button[text()="Compartir"]').click()
+    sleep(3)
     try:
       self.browser.find_element(By.XPATH, '//div[text()="Se ha compartido tu publicación."]')
       return True

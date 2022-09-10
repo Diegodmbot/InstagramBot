@@ -1,4 +1,5 @@
 from InstagramBot import InstagramBot
+from FileManager import FileManager
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from time import sleep
@@ -12,6 +13,7 @@ def create_webdriver(headless):
   return browser
 
 def menu(bot):
+  filemanager = FileManager()
   while True:
     print("MENU " + bot.username.upper())
     print("1. Take screenshot")
@@ -45,7 +47,7 @@ def menu(bot):
       else:
         print("Error ocurred")
     elif option == "6":
-      photo_name = input("Photo name: ")
+      photo_name = filemanager.get_photos_name()
       caption = input("Caption: ")
       if bot.upload_photo(photo_name, caption) == True:
         print("Photo uploaded")
@@ -74,7 +76,6 @@ def main():
     pass
   os.system("cls")
   menu(bot)
-  
 
 main()
 
