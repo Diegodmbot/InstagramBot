@@ -1,6 +1,7 @@
 from InstagramBot import InstagramBot
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+import geckodriver_autoinstaller
 from time import sleep
 import os
 
@@ -60,6 +61,7 @@ def menu(bot):
     os.system("cls")
 
 def main():
+  geckodriver_autoinstaller.install()
   os.system("cls")
   username = input("User: ")
   password = ""
