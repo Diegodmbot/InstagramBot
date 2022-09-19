@@ -7,3 +7,6 @@ class FileManager:
     for file in os.listdir(os.getcwd() + "\\img\\"):
       photos_name.append(file)
     return photos_name
+  def remove_photos(self, photos_name):
+    for photo in photos_name:
+      os.remove(os.getcwd() + "\\img\\" + photo)

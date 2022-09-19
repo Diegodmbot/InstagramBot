@@ -6,6 +6,8 @@ from getpass import getpass
 from time import sleep
 import os
 
+EMOJI_BOT = "🤖"
+
 def clear_console():
   os.system("clear" if os.name == "posix" else "cls") # Use cls when running on Windows
     
@@ -51,10 +53,11 @@ def menu(bot):
       else:
         print("Error ocurred")
     elif option == "6":
-      photo_name = filemanager.get_photos_name()
-      caption = input("Caption: ")
-      if bot.upload_photo(photo_name, caption) == True:
+      photos_name = filemanager.get_photos_name()
+      caption = EMOJI_BOT + input("Caption: ") + EMOJI_BOT
+      if bot.upload_photo(photos_name, caption) == True:
         print("Photo uploaded")
+        filemanager.remove_photos(photos_name)
       else:
         print("Cannot upload photo")
     elif option == "7":
