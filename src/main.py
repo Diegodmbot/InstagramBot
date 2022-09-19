@@ -5,6 +5,9 @@ from selenium.webdriver.firefox.options import Options
 from time import sleep
 import os
 
+def clear_console():
+  os.system("clear" if os.name == "posix" else "cls") # Use cls when running on Windows
+    
 def create_webdriver(headless):
   browser_options = Options()
   if headless:
@@ -59,10 +62,10 @@ def menu(bot):
     else:
       print("Invalid option")
     sleep(3)
-    os.system("cls")
+    clear_console()
 
 def main():
-  os.system("cls")
+  clear_console()
   username = input("User: ")
   password = ""
   while len(password) < 6:
@@ -74,7 +77,7 @@ def main():
   bot.accept_cookies()
   while not bot.login():
     pass
-  os.system("cls")
+  clear_console()
   menu(bot)
 
 main()
