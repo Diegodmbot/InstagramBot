@@ -2,7 +2,11 @@ from InstagramBot import InstagramBot
 from FileManager import FileManager
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+<<<<<<< HEAD
 from getpass import getpass
+=======
+import geckodriver_autoinstaller
+>>>>>>> 11cc00acd5c203f96f56f85098d9427d0920bcf0
 from time import sleep
 import os
 
@@ -66,6 +70,7 @@ def menu(bot):
     clear_console()
 
 def main():
+  geckodriver_autoinstaller.install()
   clear_console()
   username = input("User: ")
   password = ""
