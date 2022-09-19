@@ -2,6 +2,7 @@ from InstagramBot import InstagramBot
 from FileManager import FileManager
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+from getpass import getpass
 from time import sleep
 import os
 
@@ -69,7 +70,7 @@ def main():
   username = input("User: ")
   password = ""
   while len(password) < 6:
-    password = input("Password: ")
+    password = getpass("Password: ")
   headless_flag = input("Headless mode? (y/n): ")
   browser = create_webdriver(headless_flag == "y")
   bot = InstagramBot(username, password, browser)
