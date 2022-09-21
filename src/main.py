@@ -1,3 +1,4 @@
+from turtle import clear
 from InstagramBot import InstagramBot
 from FileManager import FileManager
 from selenium import webdriver
@@ -24,35 +25,39 @@ def menu(bot):
     print("MENU " + bot.username.upper())
     print("1. Take screenshot")
     print("2. Get followers number")
-    print("3. Follow user")
-    print("4. Unfollow user")
-    print("5. Follow my followers")
-    print("6. Upload photo")
-    print("7. Exit")
+    print("3. Get following number")
+    print("4. Follow user")
+    print("5. Unfollow user")
+    print("6. Follow only my followers")
+    print("7. Upload photo")
+    print("8. Exit")
     option = input("Option: ")
+    clear_console()
     if option == "1":
       screenshot_name = input("Screenshot name: ")
       bot.take_screenshot(screenshot_name)
     elif option == "2":
       print("Número de seguidores: " + str(bot.get_followers_number()))
     elif option == "3":
+      print("Número de seguidos: " + str(bot.get_following_number()))
+    elif option == "4":
       user = input("User: ")
       if bot.follow_user(user) == True:
         print("User: @" + user + " followed")
       else:
         print("Cannot follow user")
-    elif option == "4":
+    elif option == "5":
       user = input("User: ")
       if bot.unfollow_user(user) == True:
         print("User: @" + user + " unfollowed")
       else:
         print("Cannot unfollow user")
-    elif option == "5":
+    elif option == "6":
       if bot.follow_all_followers() == True:
-        print("Followed all your followers")
+        print("You are following only your followers")
       else:
         print("Error ocurred")
-    elif option == "6":
+    elif option == "7":
       photos_name = filemanager.get_photos_name()
       caption = EMOJI_BOT + input("Caption: ") + EMOJI_BOT
       if bot.upload_photo(photos_name, caption) == True:
@@ -60,7 +65,7 @@ def menu(bot):
         filemanager.remove_photos(photos_name)
       else:
         print("Cannot upload photo")
-    elif option == "7":
+    elif option == "8":
       bot.close_browser()
       break
     else:
@@ -85,7 +90,3 @@ def main():
   menu(bot)
 
 main()
-
-# TODO:
-  # Script para eliminar las fotos de un directorio local
-  # Darle forma a todo el código
