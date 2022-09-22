@@ -1,10 +1,10 @@
-from turtle import clear
 from InstagramBot import InstagramBot
 from FileManager import FileManager
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from getpass import getpass
 from time import sleep
+from datetime import date, datetime
 import os
 
 EMOJI_BOT = "🤖"
@@ -18,6 +18,9 @@ def create_webdriver(headless):
     browser_options.add_argument("--headless")
   browser = webdriver.Firefox(options=browser_options)
   return browser
+
+def get_week_of_the_year():
+  return date.today().isocalendar()[1]
 
 def menu(bot):
   filemanager = FileManager()
@@ -59,7 +62,7 @@ def menu(bot):
         print("Error ocurred")
     elif option == "7":
       photos_name = filemanager.get_photos_name()
-      caption = EMOJI_BOT + input("Caption: ") + EMOJI_BOT
+      caption = EMOJI_BOT + "Semana " + str(get_week_of_the_year()) + " de " + str(datetime.now().year) + EMOJI_BOT
       if bot.upload_photo(photos_name, caption) == True:
         print("Photo uploaded")
         filemanager.remove_photos(photos_name)
