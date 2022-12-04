@@ -30,19 +30,26 @@ class InstagramBot:
     self.save_login()
     self.not_aceppt_notifications()
     return True
+
   def run_browser(self):
     self.browser.implicitly_wait(10)
     self.browser.get('https://www.instagram.com/')
+  
   def is_not_logged(self):
     try:
       self.browser.find_element(By.XPATH, '//input[@name="username"]')
       return True
     except:
       return False
+  
   # Aceptar cookies (Solo las necesarias)
   def accept_cookies(self):
-    self.browser.find_element(By.XPATH, '/html/body/div[4]/div/div/button[1]').click()
+    try:
+      self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/button[1]').click() 
+    except:
+      self.browser.find_element(By.XPATH, '/html/body/div[4]/div/div/button[1]').click()
     print("Cookies accepted")
+  
   # Guarda información de la sesión para que no se tenga que loguear cada vez
   def save_login(self):
     # Diferentes referencias para acceder al boton de guardar información
@@ -54,22 +61,27 @@ class InstagramBot:
        self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[1]/section/main/div/div/div/section/div/button').click()
       except:
         pass
+  
   def not_aceppt_notifications(self):
     self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[2]').click()
+  
   ##############################################################################
   #                             FUNCIONALIDADES                                #
   ##############################################################################
+  
   # Cerrar el navegador
   def close_browser(self):
     sleep(3)
     self.browser.close()
     print("Browser closed")
+  
   # Tomar captura de pantalla
   def take_screenshot(self, screenshot_name):
     sleep(2)
     self.browser.save_screenshot(screenshot_name + '.png')
     print("Screenshot taken")
     return True
+  
   # Bajar hasta el final de la página
   # https://medium.com/jacklee26/selenium-instagram-followers-and-following-list-52c335a4ec03
   def scroll_down(self, scroll_box):
@@ -88,21 +100,25 @@ class InstagramBot:
       return True
     except:
       return False
+  
   ##############################################################################
   #                                 GETTERS                                    #
   ##############################################################################
+  
   # Devuelve el número de seguidores
   def get_followers_number(self):
     self.browser.get('https://www.instagram.com/' + self.username + '/followers')
     sleep(2)
     followers_number = self.browser.find_elements(By.XPATH, '//a[@href="/' + self.username + '/followers/"]')
     return int(followers_number[0].text.split(' ')[0])
+  
   # Devuelve el número de seguidos
   def get_following_number(self):
     self.browser.get('https://www.instagram.com/' + self.username + '/following')
     sleep(2)
     following_number = self.browser.find_elements(By.XPATH, '//a[@href="/' + self.username + '/following/"]')
     return int(following_number[0].text.split(' ')[0])
+  
   # Devuelve una lista con los seguidores
   def get_followers(self):
     number_of_followers = self.get_followers_number()
@@ -119,6 +135,7 @@ class InstagramBot:
       followers.append(followers_list.text)
       j += 1
     return followers
+  
   # Devuelve una lista con los seguidos
   def get_following(self):
     number_of_following = self.get_following_number()
@@ -138,10 +155,12 @@ class InstagramBot:
         pass
       j += 1
     return following
+  
   ##############################################################################
   #                           METODOS PARA SEGUIR                              #
   ##############################################################################
   # sigue a un usuario
+  
   def follow_user(self, user):
     self.browser.get('https://www.instagram.com/' + user)
     try:
@@ -150,6 +169,7 @@ class InstagramBot:
       return True
     except:
         return self.follow_follower(user) 
+  
   # Seguir a un usuario que ya te sigue
   def follow_follower(self, follower):
     self.browser.get('https://www.instagram.com/' + follower)
@@ -163,6 +183,7 @@ class InstagramBot:
         return True
     except:
         return False
+  
   def unfollow_user(self, user):
     self.browser.get('https://www.instagram.com/' + user)
     try:
@@ -173,6 +194,7 @@ class InstagramBot:
       return True
     except:
       return False
+  
   # seguir a todos los seguidores del usuario
   def follow_all_followers(self):
     try:
@@ -192,9 +214,11 @@ class InstagramBot:
     except Exception as e:
       print(e)
       return False
+  
   ##############################################################################
   #                         METODOS  PARA SUBIR FOTOS                          #
   ##############################################################################
+  
   # Subir fotos con el formato 1:1 de una carpeta
   def upload_photo(self, photo_list, caption):
     # Abrir la página de subir fotos

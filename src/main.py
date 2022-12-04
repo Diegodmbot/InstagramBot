@@ -73,7 +73,7 @@ def menu(bot):
       break
     else:
       print("Invalid option")
-    sleep(3)
+    input("Press enter to continue...")
     clear_console()
 
 def main():
