@@ -244,7 +244,8 @@ class InstagramBot:
         # Seleccionar la primera imagen
         try:
             add_file_input = self.browser.find_element(
-                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/form/input')
+                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/' +
+                'div/div/div[2]/div[1]/form/input')
         except:
             print("Can't find the image selector button")
             return False
@@ -256,18 +257,22 @@ class InstagramBot:
         print("Photo: " + photo_list[0] + " uploaded")
         # Abrir menu para seleccionar mas fotos
         self.browser.find_element(
-            By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button').click()
+            By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/' +
+            'div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button').click()
         for photo in photo_list[1:]:
             sleep(1)
             self.browser.find_element(
-                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/div[1]/div/div/div/div[2]/form/input').send_keys(self.PHOTOPATH + photo)
+                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/' +
+                'div/div/div[2]/div[1]/div/div/div/div[3]/div/div[1]/div/div/div/div[2]/form/input').send_keys(self.PHOTOPATH + photo)
             print("Photo: " + photo + " uploaded")
             # Se cierra y se abre el menu de seleccionar fotos para resetaear la opcion de seleccionar mas fotos
             # Esto soluciona el problema de que se suben varias fotos en cada iteración
             self.browser.find_element(
-                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button').click()
+                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/' +
+                'div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button').click()
             self.browser.find_element(
-                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button').click()
+                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/' +
+                'div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button').click()
         self.browser.find_element(
             By.XPATH, '//button[text()="Siguiente"]').click()
         # Editar la imagen
