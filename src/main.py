@@ -1,5 +1,6 @@
 from InstagramBot import InstagramBot
 from FileManager import FileManager
+from Credentials import Credentials
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from getpass import getpass
@@ -7,20 +8,14 @@ from time import sleep
 from datetime import date, datetime
 import os
 
+import BrowserManager
+
 EMOJI_BOT = "🤖"
 
 
 def clear_console():
     # Use cls when running on Windows
     os.system("clear" if os.name == "posix" else "cls")
-
-
-def create_webdriver(headless):
-    browser_options = Options()
-    if headless:
-        browser_options.add_argument("--headless")
-    browser = webdriver.Firefox(options=browser_options)
-    return browser
 
 
 def get_week_of_the_year():
@@ -76,7 +71,10 @@ def menu(bot):
             else:
                 print("Cannot upload photo")
         elif option == "8":
-            bot.close_browser()
+            try:
+                bot.close_browser()
+            except:
+                print("Error on closing browser")
             break
         else:
             print("Invalid option")
@@ -86,11 +84,8 @@ def menu(bot):
 
 def main():
     clear_console()
-    username = input("User: ")
-    password = getpass("Password: ")
-    headless_flag = input("Headless mode? (y/n): ")
-    browser = create_webdriver(headless_flag == "y")
-    bot = InstagramBot(username, password, browser)
+    username, password = Credentials().get_credentials()
+    bot = InstagramBot(username, password)
     bot.run_browser()
     bot.accept_cookies()
     while not bot.login():

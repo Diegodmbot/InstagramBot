@@ -1,14 +1,13 @@
-from contextlib import nullcontext
+from BrowserManager import BrowserManager
 from time import sleep
-from selenium.webdriver.common.by import By
 import os
 
 
 class InstagramBot:
-    def __init__(self, username, password, browser):
+    def __init__(self, username, password):
         self.username = username
         self.password = password
-        self.browser = browser
+        self.browser = BrowserManager()
         self.PHOTOPATH = os.getcwd() + '\\img\\'
     ############################################################################
     #                              INICIAR SESION                              #
@@ -16,18 +15,18 @@ class InstagramBot:
     # Iniciar sesión
 
     def login(self):
-        self.browser.find_element(
-            By.XPATH, '//input[@name="username"]').send_keys(self.username)
-        self.browser.find_element(
-            By.XPATH, '//input[@name="password"]').send_keys(self.password)
+        self.browser.send_key_to_element(
+            '//input[@name="username"]', self.username)
+        self.browser.send_key_to_element(
+            '//input[@name="password"]', self.password)
         sleep(2)
         # Hacer click en el botón de iniciar sesión
         try:
-            self.browser.find_element(
-                By.XPATH, '//button[@type="submit"]').click()
+            self.browser.click_element(
+                '//button[@type="submit"]')
         except:
-            self.browser.find_element(
-                By.XPATH, '/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button').click()
+            self.browser.click_element(
+                '/html/body/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]/button')
         # El tiempo de este sleep es importante, si es muy corto no se loguea
         sleep(2)
         print("You are logged in")
@@ -36,14 +35,13 @@ class InstagramBot:
         return True
 
     def run_browser(self):
-        self.browser.implicitly_wait(10)
-        self.browser.get('https://www.instagram.com/')
+        self.browser.access_url('https://www.instagram.com/')
 
     # Aceptar cookies (Solo las necesarias)
     def accept_cookies(self):
         try:
-            self.browser.find_element(By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/' +
-                                                'div/div/div/div[2]/div/button[1]').click()
+            self.browser.click_element('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/' +
+                                       'div/div/div/div[2]/div/button[1]')
         except:
             print("Can't accept cookies")
             return False
@@ -54,8 +52,8 @@ class InstagramBot:
     def save_login(self):
         # Diferentes referencias para acceder al boton de guardar información
         try:
-            self.browser.find_element(
-                By.XPATH, '//button[text()="Guardar información"]').click()
+            self.browser.click_element(
+                '//button[text()="Guardar información"]')
         except:
             print("Can't save login")
             return False
@@ -63,8 +61,8 @@ class InstagramBot:
 
     def not_aceppt_notifications(self):
         try:
-            self.browser.find_element(By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/' +
-                                                'div/div/div/div[2]/div/div/div[3]/button[2]').click()
+            self.browser.click_element('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/' +
+                                       'div/div/div/div[2]/div/div/div[3]/button[2]')
         except:
             print("Can't not accept notifications")
             return False
@@ -76,7 +74,7 @@ class InstagramBot:
     # Cerrar el navegador
     def close_browser(self):
         sleep(3)
-        self.browser.close()
+        self.browser.close_browser()
         print("Browser closed")
 
     # Tomar captura de pantalla
@@ -95,7 +93,7 @@ class InstagramBot:
                 last_ht = ht
                 sleep(2)
                 # script en js para hacer scroll
-                ht = self.browser.execute_script(""" 
+                ht = self.browser.run_script(""" 
                     arguments[0].scrollTo(0, arguments[0].scrollHeight);
                     return arguments[0].scrollHeight; """, scroll_box)
             sleep(1)
@@ -111,20 +109,20 @@ class InstagramBot:
 
     # Devuelve el número de seguidores
     def get_followers_number(self):
-        self.browser.get('https://www.instagram.com/' +
-                         self.username + '/followers')
+        self.browser.access_url('https://www.instagram.com/' +
+                                self.username + '/followers')
         sleep(2)
-        followers_number = self.browser.find_elements(
-            By.XPATH, '//a[@href="/' + self.username + '/followers/"]')
+        followers_number = self.browser.find_element_by_xpath(
+            '//a[@href="/' + self.username + '/followers/"]')
         return int(followers_number[0].text.split(' ')[0])
 
     # Devuelve el número de seguidos
     def get_following_number(self):
-        self.browser.get('https://www.instagram.com/' +
-                         self.username + '/following')
+        self.browser.access_url('https://www.instagram.com/' +
+                                self.username + '/following')
         sleep(2)
-        following_number = self.browser.find_elements(
-            By.XPATH, '//a[@href="/' + self.username + '/following/"]')
+        following_number = self.browser.find_element_by_xpath(
+            '//a[@href="/' + self.username + '/following/"]')
         return int(following_number[0].text.split(' ')[0])
 
     # Devuelve una lista con los seguidores
@@ -133,16 +131,16 @@ class InstagramBot:
         self.browser.get('https://www.instagram.com/' +
                          self.username + '/followers')
         sleep(2)
-        scroll_box = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/' +
-                                                         'div[2]/div/div/div/div/div[2]/div/div/div[2]')
+        scroll_box = self.browser.find_element_by_xpath('/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/' +
+                                                        'div[2]/div/div/div/div/div[2]/div/div/div[2]')
         self.scroll_down(scroll_box)
         followers = []
         j = 1
         while j <= number_of_followers:
-            followers_list = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/' +
-                                                       'div/div[2]/div/div/div/div/div[2]/div/div/div[2]/' +
-                                                       'div[1]/div/div[' + str(j) + ']/div[2]/div[1]/div/div/' +
-                                                       'span/a/span/div')
+            followers_list = self.browser.find_element_by_xpath('/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/' +
+                                                                'div/div[2]/div/div/div/div/div[2]/div/div/div[2]/' +
+                                                                'div[1]/div/div[' + str(j) + ']/div[2]/div[1]/div/' +
+                                                                'div/span/a/span/div')
             followers.append(followers_list.text)
             j += 1
         return followers
@@ -150,20 +148,20 @@ class InstagramBot:
     # Devuelve una lista con los seguidos
     def get_following(self):
         number_of_following = self.get_following_number()
-        self.browser.get('https://www.instagram.com/' +
-                         self.username + '/following')
+        self.browser.access_url(
+            'https://www.instagram.com/' + self.username + '/following')
         sleep(2)
-        scroll_box = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/' +
-                                                         'div[2]/div/div/div/div/div[2]/div/div/div[3]')
+        scroll_box = self.browser.find_element_by_xpath('/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/' +
+                                                        'div[2]/div/div/div/div/div[2]/div/div/div[3]')
         self.scroll_down(scroll_box)
         following = []
         j = 1
         while j <= number_of_following:
             try:
-                following_list = self.browser.find_element(By.XPATH, '/html/body/div[1]/div/div/div/div[2]/div/div/' +
-                                                           'div[1]/div/div[2]/div/div/div/div/div[2]/div/' +
-                                                           'div/div[3]/div[1]/div/div[' + str(j) + ']/div[2]' +
-                                                           '/div[1]/div/div/span/a/span/div')
+                following_list = self.browser.find_element_by_xpath('/html/body/div[1]/div/div/div/div[2]/div/div/' +
+                                                                    'div[1]/div/div[2]/div/div/div/div/div[2]/div/' +
+                                                                    'div/div[3]/div[1]/div/div[' + str(j) + ']/div[2]' +
+                                                                    '/div[1]/div/div/span/a/span/div')
                 following.append(following_list.text)
             except:
                 pass
@@ -176,10 +174,9 @@ class InstagramBot:
     # sigue a un usuario
 
     def follow_user(self, user):
-        self.browser.get('https://www.instagram.com/' + user)
+        self.browser.access_url('https://www.instagram.com/' + user)
         try:
-            self.browser.find_element(
-                By.XPATH, '//div[text()="Seguir"]').click()
+            self.browser.click_element('//div[text()="Seguir"]')
             print("You are following " + user)
             return True
         except:
@@ -187,13 +184,12 @@ class InstagramBot:
 
     # Seguir a un usuario que ya te sigue
     def follow_follower(self, follower):
-        self.browser.get('https://www.instagram.com/' + follower)
+        self.browser.access_url('https://www.instagram.com/' + follower)
         try:
-            self.browser.find_element(
-                By.XPATH, '//div[text()="Seguir también"]').click()
+            self.browser.click_element('//div[text()="Seguir también"]')
             try:
-                self.browser.find_element(
-                    By.XPATH, '//div[text()="Restringimos determinada actividad para proteger a nuestra comunidad."]')
+                self.browser.find_element_by_xpath(
+                    '//div[text()="Restringimos determinada actividad para proteger a nuestra comunidad."]')
                 return False
             except:
                 print("You are following " + follower)
@@ -204,12 +200,10 @@ class InstagramBot:
     def unfollow_user(self, user):
         self.browser.get('https://www.instagram.com/' + user)
         try:
-            self.browser.find_element(
-                By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[1]/section/main/div/header/section/' +
-                          'div[1]/div[1]/div/div[2]/button').click()
+            self.browser.click_element('/html/body/div[1]/div/div/div/div[1]/div/div/div/div[1]/section/main/div/header/section/' +
+                                       'div[1]/div[1]/div/div[2]/button')
             sleep(1)
-            self.browser.find_element(
-                By.XPATH, '//button[text()="Dejar de seguir"]').click()
+            self.browser.click_element('//button[text()="Dejar de seguir"]')
             print("You are not following " + user)
             return True
         except:
@@ -243,9 +237,9 @@ class InstagramBot:
         self.open_upload_page()
         # Seleccionar la primera imagen
         try:
-            add_file_input = self.browser.find_element(
-                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/' +
-                'div/div/div[2]/div[1]/form/input')
+            add_file_input = self.browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/' +
+                                                                'div/div[3]/div/div/div/div/div[2]/div/div/div/' +
+                                                                'div[2]/div[1]/form/input')
         except:
             print("Can't find the image selector button")
             return False
@@ -256,40 +250,33 @@ class InstagramBot:
             return False
         print("Photo: " + photo_list[0] + " uploaded")
         # Abrir menu para seleccionar mas fotos
-        self.browser.find_element(
-            By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/div/' +
-            'div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button').click()
+        self.browser.click_element('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/' +
+                                   'div[2]/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button')
         for photo in photo_list[1:]:
             sleep(1)
-            self.browser.find_element(
-                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/' +
-                'div/div/div[2]/div[1]/div/div/div/div[3]/div/div[1]/div/div/div/div[2]/form/input').send_keys(self.PHOTOPATH + photo)
+            self.browser.send_key_to_element('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/' +
+                                             'div/div/div[2]/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/div[1]/' +
+                                             'div/div/div/div[2]/form/input', self.PHOTOPATH + photo)
             print("Photo: " + photo + " uploaded")
             # Se cierra y se abre el menu de seleccionar fotos para resetaear la opcion de seleccionar mas fotos
             # Esto soluciona el problema de que se suben varias fotos en cada iteración
-            self.browser.find_element(
-                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/' +
-                'div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button').click()
-            self.browser.find_element(
-                By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[2]/div/' +
-                'div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button').click()
-        self.browser.find_element(
-            By.XPATH, '//button[text()="Siguiente"]').click()
+            self.browser.click_element('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/' +
+                                       'div/div[2]/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button')
+            self.browser.click_element('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/ ' +
+                                       'div/div[2]/div/div/div/div[2]/div[1]/div/div/div/div[3]/div/div[2]/div/button')
+        self.browser.click_element('//button[text()="Siguiente"]')
         # Editar la imagen
         sleep(2)
-        self.browser.find_element(
-            By.XPATH, '//button[text()="Siguiente"]').click()
+        self.browser.click_element('//button[text()="Siguiente"]')
         # Pie de pagina
         try:
-            caption_input = self.browser.find_element(
-                By.XPATH, '//textarea[@placeholder="Escribe un pie de foto..."]')
+            caption_input = self.browser.send_key_to_element(
+                '//textarea[@placeholder="Escribe un pie de foto..."]', caption)
         except:
             print("Can't find the caption input")
             return False
-        caption_input.send_keys(caption)
         # Publicar
-        self.browser.find_element(
-            By.XPATH, '//button[text()="Compartir"]').click()
+        self.browser.click_element('//button[text()="Compartir"]')
         sleep(2)
         # Esperar a que se publique la foto
         while self.photo_uploaded() == False:
@@ -298,8 +285,8 @@ class InstagramBot:
 
     def open_upload_page(self):
         try:
-            self.browser.find_element(By.XPATH, '/html/body/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/' +
-                                                'div[1]/div/div/div/div/div[2]/div[6]/div/div/a/div').click()
+            self.browser.click_element('/html/body/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/div[1]/div/' +
+                                       'div/div/div/div[2]/div[6]/div/div/a/div')
         except:
             print("Can't find the upload button")
             return False
@@ -307,8 +294,8 @@ class InstagramBot:
 
     def photo_uploaded(self):
         try:
-            self.browser.find_element(
-                By.XPATH, '//textarea[@placeholder="Se ha compartido tu publicación."]')
+            self.browser.find_element_by_xpath(
+                '//textarea[@placeholder="Se ha compartido tu publicación."]')
             return True
         except:
             return False
