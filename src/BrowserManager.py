@@ -35,5 +35,10 @@ class BrowserManager:
     def run_script(self, script, element):
         self.browser.execute_script(script, element)
 
+    # take a screenshot
+    def take_screenshot(self, name):
+        self.browser.save_screenshot(name)
+        
+    # close browser
     def close_browser(self):
         self.browser.close()

@@ -1,14 +1,8 @@
 from InstagramBot import InstagramBot
 from FileManager import FileManager
 from Credentials import Credentials
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
-from getpass import getpass
-from time import sleep
 from datetime import date, datetime
 import os
-
-import BrowserManager
 
 EMOJI_BOT = "🤖"
 
@@ -88,8 +82,7 @@ def main():
     bot = InstagramBot(username, password)
     bot.run_browser()
     bot.accept_cookies()
-    while not bot.login():
-        pass
+    bot.login()
     clear_console()
     menu(bot)
 

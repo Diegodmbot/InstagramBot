@@ -74,13 +74,18 @@ class InstagramBot:
     # Cerrar el navegador
     def close_browser(self):
         sleep(3)
-        self.browser.close_browser()
-        print("Browser closed")
+        try:
+            self.browser.close_browser()
+            print("Browser closed")
+            return True
+        except:
+            print("Can't close browser")
+            return False
 
     # Tomar captura de pantalla
     def take_screenshot(self, screenshot_name):
         sleep(2)
-        self.browser.save_screenshot(screenshot_name + '.png')
+        self.browser.take_screenshot(screenshot_name + '.png')
         print("Screenshot taken")
         return True
 
