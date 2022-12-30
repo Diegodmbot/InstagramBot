@@ -2,3 +2,5 @@
 config/**
 src/__pycache__/**
 *.png
+img/**
+src/Credentials.py
