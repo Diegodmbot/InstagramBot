@@ -3,7 +3,7 @@ from FileManager import FileManager
 from Credentials import Credentials
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-from getpass import getpass
+import geckodriver_autoinstaller
 from time import sleep
 from datetime import date, datetime
 import os
@@ -83,6 +83,7 @@ def menu(bot):
 
 
 def main():
+    geckodriver_autoinstaller.install()
     clear_console()
     username, password = Credentials().get_credentials()
     bot = InstagramBot(username, password)
