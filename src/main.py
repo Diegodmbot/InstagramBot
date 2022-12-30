@@ -23,11 +23,13 @@ def menu(bot):
         print("1. Take screenshot")
         print("2. Get followers number")
         print("3. Get following number")
-        print("4. Follow user")
-        print("5. Unfollow user")
-        print("6. Follow only my followers")
-        print("7. Upload photo")
-        print("8. Exit")
+        print("4. Get followers")
+        print("5. Get following")
+        print("6. Follow user")
+        print("7. Unfollow user")
+        print("8. Follow only my followers")
+        print("9. Upload photo")
+        print("10. Exit")
         option = input("Option: ")
         clear_console()
         if option == "1":
@@ -38,23 +40,27 @@ def menu(bot):
         elif option == "3":
             print("Número de seguidos: " + str(bot.get_following_number()))
         elif option == "4":
+            print("Seguidores: " + str(bot.get_followers()))
+        elif option == "5":
+            print("Seguidos: " + str(bot.get_following()))
+        elif option == "6":
             user = input("User: ")
             if bot.follow_user(user) == True:
                 print("User: @" + user + " followed")
             else:
                 print("Cannot follow user")
-        elif option == "5":
+        elif option == "7":
             user = input("User: ")
             if bot.unfollow_user(user) == True:
                 print("User: @" + user + " unfollowed")
             else:
                 print("Cannot unfollow user")
-        elif option == "6":
+        elif option == "8":
             if bot.follow_all_followers() == True:
                 print("You are following only your followers")
             else:
                 print("Error ocurred")
-        elif option == "7":
+        elif option == "9":
             photos_name = filemanager.get_photos_name()
             caption = EMOJI_BOT + "Semana " + \
                 str(get_week_of_the_year()) + " de " + \
@@ -64,7 +70,7 @@ def menu(bot):
                 filemanager.remove_photos(photos_name)
             else:
                 print("Cannot upload photo")
-        elif option == "8":
+        elif option == "10":
             try:
                 bot.close_browser()
             except:
@@ -83,8 +89,9 @@ def main():
     bot.run_browser()
     bot.accept_cookies()
     bot.login()
+    bot.scroll_down()
     clear_console()
-    menu(bot)
+    #menu(bot)
 
 
 main()

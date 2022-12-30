@@ -7,8 +7,7 @@ sys.path.insert(0, join(dirname(dirname(__file__)), "src"))
 from InstagramBot import InstagramBot
 from Credentials import Credentials
 
-class TestFunctionalities:
-    
+class TestGetters:
     instagram_bot = None
     @pytest.fixture(autouse=True)
     def setup(self):
@@ -18,18 +17,14 @@ class TestFunctionalities:
         self.instagram_bot.accept_cookies()
         self.instagram_bot.login()
     
-    def test_sample(self):
-        assert 1 == 1
+    def test_get_followers_number(self):
+        assert self.instagram_bot.get_followers_number() > 0
         
-    def test_close_browser(self):
-        assert self.instagram_bot.close_browser() == True
+    def test_get_following_number(self):
+        assert self.instagram_bot.get_following_number() > 0 
         
-    def test_take_screenshot(self):
-        assert self.instagram_bot.take_screenshot("test_screenshot") == True
+    def test_get_followers(self):
+        assert self.instagram_bot.get_followers() != []
         
-    def test_scroll_down(self):
-        scroll_box = self.instagram_bot.browser.find_element_by_xpath('/html')
-        assert self.instagram_bot.scroll_down(scroll_box) == True
-    
-    
-    
+    def test_get_following(self):
+        assert self.instagram_bot.get_following() != []

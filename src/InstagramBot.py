@@ -99,8 +99,8 @@ class InstagramBot:
                 sleep(2)
                 # script en js para hacer scroll
                 ht = self.browser.run_script(""" 
-                    arguments[0].scrollTo(0, arguments[0].scrollHeight);
-                    return arguments[0].scrollHeight; """, scroll_box)
+        arguments[0].scrollTo(0, arguments[0].scrollHeight);
+        return arguments[0].scrollHeight; """, scroll_box)
             sleep(1)
             del scroll_box
             del last_ht, ht
@@ -114,38 +114,36 @@ class InstagramBot:
 
     # Devuelve el número de seguidores
     def get_followers_number(self):
-        self.browser.access_url('https://www.instagram.com/' +
-                                self.username + '/followers')
+        self.browser.access_url('https://www.instagram.com/' + self.username)
         sleep(2)
-        followers_number = self.browser.find_element_by_xpath(
-            '//a[@href="/' + self.username + '/followers/"]')
-        return int(followers_number[0].text.split(' ')[0])
+        followers_number = self.browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div[1]/div/div/div/' +
+                                                              'div[1]/div[1]/div[2]/section/main/div/header/section/' +
+                                                              'ul/li[2]/a/div/span/span')
+        return int(followers_number.text)
 
     # Devuelve el número de seguidos
     def get_following_number(self):
-        self.browser.access_url('https://www.instagram.com/' +
-                                self.username + '/following')
+        self.browser.access_url('https://www.instagram.com/' + self.username)
         sleep(2)
-        following_number = self.browser.find_element_by_xpath(
-            '//a[@href="/' + self.username + '/following/"]')
-        return int(following_number[0].text.split(' ')[0])
+        followers_number = self.browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div[1]/div/div/div/' +
+                                                              'div[1]/div[1]/div[2]/section/main/div/header/section/' +
+                                                              'ul/li[3]/a/div/span/span')
+        return int(followers_number.text)
 
     # Devuelve una lista con los seguidores
     def get_followers(self):
         number_of_followers = self.get_followers_number()
-        self.browser.get('https://www.instagram.com/' +
+        self.browser.access_url('https://www.instagram.com/' +
                          self.username + '/followers')
         sleep(2)
-        scroll_box = self.browser.find_element_by_xpath('/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/' +
-                                                        'div[2]/div/div/div/div/div[2]/div/div/div[2]')
+        scroll_box = self.browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div')
         self.scroll_down(scroll_box)
         followers = []
         j = 1
         while j <= number_of_followers:
-            followers_list = self.browser.find_element_by_xpath('/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/' +
-                                                                'div/div[2]/div/div/div/div/div[2]/div/div/div[2]/' +
-                                                                'div[1]/div/div[' + str(j) + ']/div[2]/div[1]/div/' +
-                                                                'div/span/a/span/div')
+            followers_list = self.browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[' + str(j) + ']/div[2]/div[1]/div/div/span/a/span/div')
+            # /html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[1]/div[2]/div[1]/div/div/span/a/span/div
+            # /html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[2]/div[2]/div[1]/div/div/span/a/span/div
             followers.append(followers_list.text)
             j += 1
         return followers
@@ -156,17 +154,15 @@ class InstagramBot:
         self.browser.access_url(
             'https://www.instagram.com/' + self.username + '/following')
         sleep(2)
-        scroll_box = self.browser.find_element_by_xpath('/html/body/div[1]/div/div/div/div[2]/div/div/div[1]/div/' +
-                                                        'div[2]/div/div/div/div/div[2]/div/div/div[3]')
+        scroll_box = self.browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]')
         self.scroll_down(scroll_box)
         following = []
         j = 1
         while j <= number_of_following:
             try:
-                following_list = self.browser.find_element_by_xpath('/html/body/div[1]/div/div/div/div[2]/div/div/' +
-                                                                    'div[1]/div/div[2]/div/div/div/div/div[2]/div/' +
-                                                                    'div/div[3]/div[1]/div/div[' + str(j) + ']/div[2]' +
-                                                                    '/div[1]/div/div/span/a/span/div')
+                following_list = self.browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[' + str(j) + ']/div[2]/div[1]/div/div/span/a/span/div')
+                # /html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[1]/div[2]/div[1]/div/div/span/a/span/div
+                # /html/body/div[2]/div/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[2]/div[2]/div[1]/div/div/span/a/span/div
                 following.append(following_list.text)
             except:
                 pass
@@ -275,8 +271,8 @@ class InstagramBot:
         self.browser.click_element('//button[text()="Siguiente"]')
         # Pie de pagina
         try:
-            caption_input = self.browser.send_key_to_element(
-                '//textarea[@placeholder="Escribe un pie de foto..."]', caption)
+            self.browser.send_key_to_element(
+            '//textarea[@placeholder="Escribe un pie de foto..."]', caption)
         except:
             print("Can't find the caption input")
             return False

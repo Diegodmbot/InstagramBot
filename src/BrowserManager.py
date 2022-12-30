@@ -8,7 +8,7 @@ class BrowserManager:
     def __init__(self):
         self.browser_options = Options()
         self.set_headles_mode()
-        self.browser = webdriver.Firefox(options=self.browser_options)
+        self.browser = webdriver.Firefox()
         self.browser.implicitly_wait(10)
 
     def access_url(self, url):
@@ -32,7 +32,7 @@ class BrowserManager:
         self.browser.find_element(By.XPATH, element).send_keys(key)
 
     # run a script in the browser
-    def run_script(self, script, element):
+    def run_script(self,script, element):
         self.browser.execute_script(script, element)
 
     # take a screenshot
@@ -41,4 +41,4 @@ class BrowserManager:
         
     # close browser
     def close_browser(self):
-        self.browser.close()
+        self.browser.quit()
