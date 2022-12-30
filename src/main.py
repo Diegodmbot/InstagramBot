@@ -1,6 +1,7 @@
 from InstagramBot import InstagramBot
 from FileManager import FileManager
 from Credentials import Credentials
+import geckodriver_autoinstaller
 from datetime import date, datetime
 import os
 
@@ -83,15 +84,15 @@ def menu(bot):
 
 
 def main():
+    geckodriver_autoinstaller.install()
     clear_console()
     username, password = Credentials().get_credentials()
     bot = InstagramBot(username, password)
     bot.run_browser()
     bot.accept_cookies()
     bot.login()
-    bot.scroll_down()
     clear_console()
-    #menu(bot)
+    menu(bot)
 
 
 main()
