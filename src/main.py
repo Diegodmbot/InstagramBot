@@ -85,7 +85,6 @@ def menu(bot):
 
 def main():
     geckodriver_autoinstaller.install()
-    #geckodriver_autoinstaller.install()
     clear_console()
     username, password = Credentials().get_credentials()
     bot = InstagramBot(username, password)
